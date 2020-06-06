@@ -23,6 +23,7 @@ namespace UIDesign
             DialogResult d = MessageBox.Show("Bạn chắc  chắc muốn thoát chứ ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (d == DialogResult.No) return;
             if (d == DialogResult.Yes) this.Dispose();
+            MessageBox.Show("Test");
         }
 
         private void TextBox1_Click(object sender, EventArgs e)
