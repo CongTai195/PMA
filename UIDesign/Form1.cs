@@ -24,6 +24,8 @@ namespace UIDesign
             if (d == DialogResult.No) return;
             if (d == DialogResult.Yes) this.Dispose();
             MessageBox.Show("Test");
+            MessageBox.Show("Test cho Long");
+
         }
 
         private void TextBox1_Click(object sender, EventArgs e)
