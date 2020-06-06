@@ -287,6 +287,7 @@
             this.button_ok.TabIndex = 24;
             this.button_ok.Text = "Xác nhận";
             this.button_ok.UseVisualStyleBackColor = true;
+            this.button_ok.Click += new System.EventHandler(this.Button_ok_Click);
             // 
             // button_cancel
             // 

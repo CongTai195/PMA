@@ -23,5 +23,10 @@ namespace UIDesign
         {
             this.Dispose();
         }
+
+        private void Button_ok_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
     }
 }
