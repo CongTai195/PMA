@@ -23,9 +23,6 @@ namespace UIDesign
             DialogResult d = MessageBox.Show("Bạn chắc  chắc muốn thoát chứ ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (d == DialogResult.No) return;
             if (d == DialogResult.Yes) this.Dispose();
-            MessageBox.Show("Test");
-            MessageBox.Show("Test cho Long");
-            MessageBox.Show("Test cho Long lan 2");
 
         }
 
