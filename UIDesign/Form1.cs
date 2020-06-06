@@ -25,6 +25,7 @@ namespace UIDesign
             if (d == DialogResult.Yes) this.Dispose();
             MessageBox.Show("Test");
             MessageBox.Show("Test cho Long");
+            MessageBox.Show("Test cho Long lan 2");
 
         }
 
