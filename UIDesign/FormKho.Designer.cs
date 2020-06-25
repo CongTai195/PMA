@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormKho));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.comboBox_sanpham = new System.Windows.Forms.ComboBox();
@@ -61,6 +62,7 @@
             this.button_subQLK_delete = new System.Windows.Forms.Button();
             this.comboBox_hoatdong = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.button_back = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -79,6 +81,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.button_back);
             this.panel2.Controls.Add(this.comboBox_sanpham);
             this.panel2.Controls.Add(this.dateTimePicker3);
             this.panel2.Controls.Add(this.panel1);
@@ -363,7 +366,7 @@
             this.button_subQLK_sort.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_subQLK_sort.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_subQLK_sort.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.button_subQLK_sort.Location = new System.Drawing.Point(740, 741);
+            this.button_subQLK_sort.Location = new System.Drawing.Point(740, 526);
             this.button_subQLK_sort.Name = "button_subQLK_sort";
             this.button_subQLK_sort.Size = new System.Drawing.Size(118, 37);
             this.button_subQLK_sort.TabIndex = 4;
@@ -376,7 +379,7 @@
             this.button_subQLK_add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_subQLK_add.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_subQLK_add.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.button_subQLK_add.Location = new System.Drawing.Point(740, 526);
+            this.button_subQLK_add.Location = new System.Drawing.Point(740, 594);
             this.button_subQLK_add.Name = "button_subQLK_add";
             this.button_subQLK_add.Size = new System.Drawing.Size(118, 37);
             this.button_subQLK_add.TabIndex = 5;
@@ -389,7 +392,7 @@
             this.button_subQLK_update.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_subQLK_update.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_subQLK_update.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.button_subQLK_update.Location = new System.Drawing.Point(740, 598);
+            this.button_subQLK_update.Location = new System.Drawing.Point(740, 666);
             this.button_subQLK_update.Name = "button_subQLK_update";
             this.button_subQLK_update.Size = new System.Drawing.Size(118, 37);
             this.button_subQLK_update.TabIndex = 6;
@@ -402,7 +405,7 @@
             this.button_subQLK_delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_subQLK_delete.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_subQLK_delete.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.button_subQLK_delete.Location = new System.Drawing.Point(740, 672);
+            this.button_subQLK_delete.Location = new System.Drawing.Point(740, 740);
             this.button_subQLK_delete.Name = "button_subQLK_delete";
             this.button_subQLK_delete.Size = new System.Drawing.Size(118, 37);
             this.button_subQLK_delete.TabIndex = 7;
@@ -433,6 +436,21 @@
             this.label3.TabIndex = 37;
             this.label3.Text = "Hoạt động";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // button_back
+            // 
+            this.button_back.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
+            this.button_back.FlatAppearance.BorderSize = 0;
+            this.button_back.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_back.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.button_back.Image = ((System.Drawing.Image)(resources.GetObject("button_back.Image")));
+            this.button_back.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button_back.Location = new System.Drawing.Point(0, 3);
+            this.button_back.Name = "button_back";
+            this.button_back.Size = new System.Drawing.Size(79, 64);
+            this.button_back.TabIndex = 51;
+            this.button_back.UseVisualStyleBackColor = false;
+            this.button_back.Click += new System.EventHandler(this.Button_back_Click);
             // 
             // FormKho
             // 
@@ -496,5 +514,6 @@
         private System.Windows.Forms.ComboBox comboBox_hoatdong;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox comboBox_sanpham;
+        private System.Windows.Forms.Button button_back;
     }
 }

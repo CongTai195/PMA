@@ -317,7 +317,7 @@
             this.button_subQLSP_sort.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_subQLSP_sort.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_subQLSP_sort.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.button_subQLSP_sort.Location = new System.Drawing.Point(740, 647);
+            this.button_subQLSP_sort.Location = new System.Drawing.Point(740, 432);
             this.button_subQLSP_sort.Name = "button_subQLSP_sort";
             this.button_subQLSP_sort.Size = new System.Drawing.Size(118, 37);
             this.button_subQLSP_sort.TabIndex = 4;
@@ -330,7 +330,7 @@
             this.button_subQLSP_add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_subQLSP_add.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_subQLSP_add.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.button_subQLSP_add.Location = new System.Drawing.Point(740, 432);
+            this.button_subQLSP_add.Location = new System.Drawing.Point(740, 498);
             this.button_subQLSP_add.Name = "button_subQLSP_add";
             this.button_subQLSP_add.Size = new System.Drawing.Size(118, 37);
             this.button_subQLSP_add.TabIndex = 5;
@@ -343,7 +343,7 @@
             this.button_subQLSP_update.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_subQLSP_update.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_subQLSP_update.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.button_subQLSP_update.Location = new System.Drawing.Point(740, 504);
+            this.button_subQLSP_update.Location = new System.Drawing.Point(740, 570);
             this.button_subQLSP_update.Name = "button_subQLSP_update";
             this.button_subQLSP_update.Size = new System.Drawing.Size(118, 37);
             this.button_subQLSP_update.TabIndex = 6;
@@ -356,7 +356,7 @@
             this.button_subQLSP_delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_subQLSP_delete.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_subQLSP_delete.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.button_subQLSP_delete.Location = new System.Drawing.Point(740, 578);
+            this.button_subQLSP_delete.Location = new System.Drawing.Point(740, 644);
             this.button_subQLSP_delete.Name = "button_subQLSP_delete";
             this.button_subQLSP_delete.Size = new System.Drawing.Size(118, 37);
             this.button_subQLSP_delete.TabIndex = 7;

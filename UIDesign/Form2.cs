@@ -91,7 +91,7 @@ namespace UIDesign
 
         private void Button_subQLSPsub_show_Click(object sender, EventArgs e)
         {
-            FormSanPham f = new FormSanPham();
+            FormSanPham f = new FormSanPham("admin");
             openChildform(f);
         }
         public Form activeForm = null;
@@ -116,7 +116,7 @@ namespace UIDesign
 
         private void Button_subQLXNK_show_Click(object sender, EventArgs e)
         {
-            FormKho f = new FormKho();
+            FormKho f = new FormKho("admin");
             openChildform(f);
         }
     }

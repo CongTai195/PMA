@@ -44,14 +44,13 @@ namespace UIDesign
         private void Button_login_Click(object sender, EventArgs e)
         {
             if (textBox1.Text == "admin") {
-                //this.Close();
                 Form2 f = new Form2();
                 f.ShowDialog();
+               
             }
             if (textBox1.Text == "nhanvien")
             {
                 Form3 f = new Form3();
-                //this.Hide();
                 f.ShowDialog();
             }
         }

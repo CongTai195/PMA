@@ -13,12 +13,30 @@ namespace UIDesign
 {
     public partial class FormSanPham : Form
     {
-        public FormSanPham()
+        private string _ROLE;
+
+        public string ROLE { get => _ROLE; set => _ROLE = value; }
+
+        public FormSanPham(string role)
         {
             InitializeComponent();
+            ROLE = role;
             ShowDTGV();
             SetCBB();
             SetReadOnly();
+            SetRole();
+        }
+        public void SetRole()
+        {
+            if (ROLE == "admin")
+            {
+
+            } else if (ROLE == "nhanvien")
+            {
+                button_subQLSP_add.Dispose();
+                button_subQLSP_delete.Dispose();
+                button_subQLSP_update.Dispose();
+            }
         }
         public void SetReadOnly()
         {

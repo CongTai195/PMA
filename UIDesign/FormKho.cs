@@ -13,12 +13,31 @@ namespace UIDesign
 {
     public partial class FormKho : Form
     {
-        public FormKho()
+        private string _ROLE;
+
+        public string ROLE { get => _ROLE; set => _ROLE = value; }
+
+        public FormKho(string role)
         {
             InitializeComponent();
+            ROLE = role;
             ShowDTGV();
             SetCBB();
             SetReadOnly();
+            SetRole();
+        }
+        public void SetRole()
+        {
+            if (ROLE == "admin")
+            {
+
+            }
+            else if (ROLE == "nhanvien")
+            {
+                button_subQLK_add.Dispose();
+                button_subQLK_delete.Dispose();
+                button_subQLK_update.Dispose();
+            }
         }
         public void SetReadOnly()
         {
@@ -179,6 +198,11 @@ namespace UIDesign
                 }
             }
             
+        }
+
+        private void Button_back_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
         }
     }
 }

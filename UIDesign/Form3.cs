@@ -79,5 +79,17 @@ namespace UIDesign
         {
             openChildform(new Form6());
         }
+
+        private void Button_subQLSP_QLSP_Click(object sender, EventArgs e)
+        {
+            FormSanPham f = new FormSanPham("nhanvien");
+            openChildform(f);
+        }
+
+        private void Button_subQLK_QLXNK_Click(object sender, EventArgs e)
+        {
+            FormKho f = new FormKho("nhanvien");
+            openChildform(f);
+        }
     }
 }

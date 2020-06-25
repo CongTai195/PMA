@@ -265,6 +265,7 @@
             this.button_subQLK_QLXNK.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_subQLK_QLXNK.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button_subQLK_QLXNK.UseVisualStyleBackColor = false;
+            this.button_subQLK_QLXNK.Click += new System.EventHandler(this.Button_subQLK_QLXNK_Click);
             // 
             // button_QLK
             // 
@@ -452,6 +453,7 @@
             this.button_subQLSP_QLSP.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_subQLSP_QLSP.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button_subQLSP_QLSP.UseVisualStyleBackColor = false;
+            this.button_subQLSP_QLSP.Click += new System.EventHandler(this.Button_subQLSP_QLSP_Click);
             // 
             // button_QLSP
             // 
