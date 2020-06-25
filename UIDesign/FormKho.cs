@@ -18,6 +18,17 @@ namespace UIDesign
             InitializeComponent();
             ShowDTGV();
             SetCBB();
+            SetReadOnly();
+        }
+        public void SetReadOnly()
+        {
+            textBox_donvitinh.ReadOnly = true;
+            textBox_soluong.ReadOnly = true;
+            dateTimePicker1.Enabled = false;
+            dateTimePicker2.Enabled = false;
+            dateTimePicker3.Enabled = false;
+            comboBox1.Enabled = false;
+            comboBox_sanpham.Enabled = false;
         }
 
         public void SetCBB()
@@ -40,6 +51,24 @@ namespace UIDesign
                 }
             }
             comboBox_hoatdong.SelectedIndex = 0;
+            if (comboBox_sanpham.Items != null) comboBox_sanpham.Items.Clear();
+            foreach (SanPham i in db.SanPhams)
+            {
+                comboBox_sanpham.Items.Add(new CBBItems
+                {
+                    Value = i.spID,
+                    Text = i.spName
+                });
+            }
+            if (comboBox1.Items != null) comboBox1.Items.Clear();
+            foreach (HoatDong i in db.HoatDongs)
+            {
+                comboBox1.Items.Add(new CBBItems
+                {
+                    Value = i.hdID,
+                    Text = i.hdName
+                });
+            }
         }
 
         private void TextBox_search_Click(object sender, EventArgs e)
@@ -118,6 +147,38 @@ namespace UIDesign
             List<Kho> k = BLL_Kho.Instance.Sort_Bll(now);
             dataGridView1.DataSource = k.Select(p => new { p.kID, p.HoatDong.hdName, p.SanPham.spName, p.DVT, p.Quantity, p.MFG, p.EXP, p.Date }).ToList();
 
+        }
+
+        private void DataGridView1_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            DataGridViewSelectedRowCollection r = dataGridView1.SelectedRows;
+            SE_07 db = new SE_07();
+            if (r.Count == 1)
+            {
+                int kid = Convert.ToInt32(r[0].Cells["kID"].Value.ToString());
+                textBox_donvitinh.Text = (db.Khoes.Where(p => p.kID == kid).Select(p => p.DVT).FirstOrDefault());
+                textBox_soluong.Text = db.Khoes.Where(p => p.kID == kid).Select(p => p.Quantity).FirstOrDefault().ToString();
+                dateTimePicker1.Value = Convert.ToDateTime(db.Khoes.Where(p => p.kID == kid).Select(p => p.MFG).FirstOrDefault().ToString());
+                dateTimePicker2.Value = Convert.ToDateTime(db.Khoes.Where(p => p.kID == kid).Select(p => p.EXP).FirstOrDefault().ToString());
+                dateTimePicker3.Value = Convert.ToDateTime(db.Khoes.Where(p => p.kID == kid).Select(p => p.Date).FirstOrDefault().ToString());
+                int spid = Convert.ToInt32(db.Khoes.Where(p => p.kID == kid).Select(p => p.SanPham.spID).FirstOrDefault());
+                foreach (CBBItems i in comboBox_sanpham.Items)
+                {
+                    if (i.Value == spid)
+                    {
+                        comboBox_sanpham.SelectedIndex = comboBox_sanpham.Items.IndexOf(i);
+                    }
+                }
+                int idk = Convert.ToInt32(db.Khoes.Where(p => p.kID == kid).Select(p => p.hdID).FirstOrDefault());
+                foreach (CBBItems i in comboBox1.Items)
+                {
+                    if (i.Value == idk)
+                    {
+                        comboBox1.SelectedIndex = comboBox1.Items.IndexOf(i);
+                    }
+                }
+            }
+            
         }
     }
 }

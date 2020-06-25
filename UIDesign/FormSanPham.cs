@@ -18,6 +18,14 @@ namespace UIDesign
             InitializeComponent();
             ShowDTGV();
             SetCBB();
+            SetReadOnly();
+        }
+        public void SetReadOnly()
+        {
+            textBox_dvtsp.ReadOnly = true;
+            textBox_namesp.ReadOnly = true;
+            textBox_pricesp.ReadOnly = true;
+            comboBox1.Enabled = false;
         }
         public void SetCBB()
         {
@@ -41,11 +49,6 @@ namespace UIDesign
             comboBox2.SelectedIndex = 0;
             if (comboBox1.Items != null) comboBox1.Items.Clear();
             {
-                comboBox1.Items.Add(new CBBItems
-                {
-                    Value = 0,
-                    Text = "All"
-                });
                 foreach (LoaiSanPham i in db.LoaiSanPhams)
                 {
                     comboBox1.Items.Add(new CBBItems
@@ -55,7 +58,6 @@ namespace UIDesign
                     });
                 }
             }
-            comboBox1.SelectedIndex = 0;
         }
         private void Button_subQLSP_search_Click(object sender, EventArgs e)
         {
@@ -128,6 +130,27 @@ namespace UIDesign
         private void TextBox_search_Click(object sender, EventArgs e)
         {
             if (textBox_search.Text == "Tìm kiếm") textBox_search.Clear();
+        }
+
+        private void DataGridView1_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            SE_07 db = new SE_07();
+            DataGridViewSelectedRowCollection r = dataGridView1.SelectedRows;
+            if (r.Count == 1)
+            {
+                int spid = Convert.ToInt32(r[0].Cells["spID"].Value.ToString());
+                textBox_namesp.Text = db.SanPhams.Where(p => p.spID == spid).Select(p => p.spName).FirstOrDefault();
+                textBox_dvtsp.Text = db.SanPhams.Where(p => p.spID == spid).Select(p => p.Unit).FirstOrDefault();
+                textBox_pricesp.Text = db.SanPhams.Where(p => p.spID == spid).Select(p => p.Price).FirstOrDefault();
+                int lid = Convert.ToInt32(db.SanPhams.Where(p => p.spID == spid).Select(p => p.lID).FirstOrDefault());
+                foreach (CBBItems i in comboBox1.Items)
+                {
+                    if (i.Value == lid)
+                    {
+                        comboBox1.SelectedIndex = comboBox1.Items.IndexOf(i);
+                    }
+                }
+            }
         }
     }
 }

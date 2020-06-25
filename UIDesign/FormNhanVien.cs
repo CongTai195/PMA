@@ -17,8 +17,17 @@ namespace UIDesign
         {
             InitializeComponent();
             ShowDTGV();
+            SetReadOnly();
         }
-
+        public void SetReadOnly()
+        {
+            textBox_cmndnv.ReadOnly = true;
+            textBox_diachinv.ReadOnly = true;
+            textBox_luongnv.ReadOnly = true;
+            textBox_namenv.ReadOnly = true;
+            textBox_sdtnv.ReadOnly = true;
+            dateTimePicker1.Enabled = false;
+        }
         private void Button1_Click(object sender, EventArgs e)
         {
             this.Close();

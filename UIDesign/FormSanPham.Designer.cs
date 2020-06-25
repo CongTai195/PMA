@@ -33,11 +33,14 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.textBox_cmndnv = new System.Windows.Forms.TextBox();
+            this.textBox_dvtsp = new System.Windows.Forms.TextBox();
             this.label_dvtsp = new System.Windows.Forms.Label();
             this.textBox_pricesp = new System.Windows.Forms.TextBox();
             this.label_pricesp = new System.Windows.Forms.Label();
@@ -52,9 +55,6 @@
             this.button_subQLSP_add = new System.Windows.Forms.Button();
             this.button_subQLSP_update = new System.Windows.Forms.Button();
             this.button_subQLSP_delete = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -95,6 +95,7 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(558, 373);
             this.dataGridView1.TabIndex = 2;
+            this.dataGridView1.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DataGridView1_RowHeaderMouseClick);
             // 
             // panel2
             // 
@@ -105,7 +106,7 @@
             this.panel2.Controls.Add(this.panel4);
             this.panel2.Controls.Add(this.panel8);
             this.panel2.Controls.Add(this.panel3);
-            this.panel2.Controls.Add(this.textBox_cmndnv);
+            this.panel2.Controls.Add(this.textBox_dvtsp);
             this.panel2.Controls.Add(this.label_dvtsp);
             this.panel2.Controls.Add(this.textBox_pricesp);
             this.panel2.Controls.Add(this.label_pricesp);
@@ -118,6 +119,43 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(791, 342);
             this.panel2.TabIndex = 3;
+            // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.label2.Location = new System.Drawing.Point(327, 310);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(145, 23);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "Loại sản phẩm";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
+            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox2.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox2.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(488, 310);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(186, 29);
+            this.comboBox2.TabIndex = 7;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox1.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(180, 169);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(186, 29);
+            this.comboBox1.TabIndex = 6;
             // 
             // panel5
             // 
@@ -151,16 +189,16 @@
             this.panel3.Size = new System.Drawing.Size(354, 1);
             this.panel3.TabIndex = 3;
             // 
-            // textBox_cmndnv
+            // textBox_dvtsp
             // 
-            this.textBox_cmndnv.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
-            this.textBox_cmndnv.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox_cmndnv.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_cmndnv.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.textBox_cmndnv.Location = new System.Drawing.Point(157, 253);
-            this.textBox_cmndnv.Name = "textBox_cmndnv";
-            this.textBox_cmndnv.Size = new System.Drawing.Size(197, 22);
-            this.textBox_cmndnv.TabIndex = 2;
+            this.textBox_dvtsp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
+            this.textBox_dvtsp.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox_dvtsp.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_dvtsp.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.textBox_dvtsp.Location = new System.Drawing.Point(157, 253);
+            this.textBox_dvtsp.Name = "textBox_dvtsp";
+            this.textBox_dvtsp.Size = new System.Drawing.Size(197, 22);
+            this.textBox_dvtsp.TabIndex = 2;
             // 
             // label_dvtsp
             // 
@@ -326,43 +364,6 @@
             this.button_subQLSP_delete.UseVisualStyleBackColor = true;
             this.button_subQLSP_delete.Click += new System.EventHandler(this.Button_subQLSP_delete_Click);
             // 
-            // comboBox1
-            // 
-            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox1.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(180, 169);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(186, 29);
-            this.comboBox1.TabIndex = 6;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
-            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox2.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(488, 310);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(186, 29);
-            this.comboBox2.TabIndex = 7;
-            // 
-            // label2
-            // 
-            this.label2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.label2.Location = new System.Drawing.Point(327, 310);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(145, 23);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "Loại sản phẩm";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // FormSanPham
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -402,7 +403,7 @@
         private System.Windows.Forms.TextBox textBox_namesp;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.TextBox textBox_cmndnv;
+        private System.Windows.Forms.TextBox textBox_dvtsp;
         private System.Windows.Forms.Label label_dvtsp;
         private System.Windows.Forms.Label label_loaisp;
         private System.Windows.Forms.Panel panel5;
