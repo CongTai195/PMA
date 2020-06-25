@@ -1,6 +1,6 @@
 ﻿namespace UIDesign
 {
-    partial class Form4
+    partial class FormNhanVien
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form4));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormNhanVien));
             this.button_back = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -36,26 +36,29 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.textBox_cmndnv = new System.Windows.Forms.TextBox();
             this.label_cmndnv = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox_luongnv = new System.Windows.Forms.TextBox();
+            this.textBox_diachinv = new System.Windows.Forms.TextBox();
+            this.label_luongnv = new System.Windows.Forms.Label();
+            this.textBox_sdtnv = new System.Windows.Forms.TextBox();
             this.label_diachinv = new System.Windows.Forms.Label();
             this.textBox_namenv = new System.Windows.Forms.TextBox();
             this.label_phonenv = new System.Windows.Forms.Label();
             this.label_DOBnv = new System.Windows.Forms.Label();
             this.label_namenv = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label_luongnv = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox_search = new System.Windows.Forms.TextBox();
             this.panel9 = new System.Windows.Forms.Panel();
             this.button_subTTCN_search = new System.Windows.Forms.Button();
             this.button_subTTCN_sort = new System.Windows.Forms.Button();
+            this.button_subTTCN_add = new System.Windows.Forms.Button();
+            this.button_subTTCN_update = new System.Windows.Forms.Button();
+            this.button_subTTCN_delete = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -96,6 +99,7 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(558, 373);
             this.dataGridView1.TabIndex = 2;
+            this.dataGridView1.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DataGridView1_RowHeaderMouseClick);
             // 
             // panel2
             // 
@@ -108,10 +112,10 @@
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.textBox_cmndnv);
             this.panel2.Controls.Add(this.label_cmndnv);
-            this.panel2.Controls.Add(this.textBox3);
-            this.panel2.Controls.Add(this.textBox2);
+            this.panel2.Controls.Add(this.textBox_luongnv);
+            this.panel2.Controls.Add(this.textBox_diachinv);
             this.panel2.Controls.Add(this.label_luongnv);
-            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.textBox_sdtnv);
             this.panel2.Controls.Add(this.label_diachinv);
             this.panel2.Controls.Add(this.textBox_namenv);
             this.panel2.Controls.Add(this.label_phonenv);
@@ -146,6 +150,14 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(357, 1);
             this.panel4.TabIndex = 3;
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.White;
+            this.panel8.Location = new System.Drawing.Point(373, 281);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(354, 1);
+            this.panel8.TabIndex = 3;
             // 
             // panel7
             // 
@@ -193,27 +205,49 @@
             this.label_cmndnv.Text = "CMND";
             this.label_cmndnv.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox2
+            // textBox_luongnv
             // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.textBox2.Location = new System.Drawing.Point(508, 175);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(161, 22);
-            this.textBox2.TabIndex = 2;
+            this.textBox_luongnv.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
+            this.textBox_luongnv.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox_luongnv.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_luongnv.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.textBox_luongnv.Location = new System.Drawing.Point(508, 253);
+            this.textBox_luongnv.Name = "textBox_luongnv";
+            this.textBox_luongnv.Size = new System.Drawing.Size(161, 22);
+            this.textBox_luongnv.TabIndex = 2;
             // 
-            // textBox1
+            // textBox_diachinv
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.textBox1.Location = new System.Drawing.Point(508, 87);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(161, 22);
-            this.textBox1.TabIndex = 2;
+            this.textBox_diachinv.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
+            this.textBox_diachinv.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox_diachinv.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_diachinv.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.textBox_diachinv.Location = new System.Drawing.Point(508, 175);
+            this.textBox_diachinv.Name = "textBox_diachinv";
+            this.textBox_diachinv.Size = new System.Drawing.Size(161, 22);
+            this.textBox_diachinv.TabIndex = 2;
+            // 
+            // label_luongnv
+            // 
+            this.label_luongnv.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_luongnv.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.label_luongnv.Location = new System.Drawing.Point(368, 252);
+            this.label_luongnv.Name = "label_luongnv";
+            this.label_luongnv.Size = new System.Drawing.Size(141, 23);
+            this.label_luongnv.TabIndex = 1;
+            this.label_luongnv.Text = "Lương";
+            this.label_luongnv.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // textBox_sdtnv
+            // 
+            this.textBox_sdtnv.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
+            this.textBox_sdtnv.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox_sdtnv.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_sdtnv.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.textBox_sdtnv.Location = new System.Drawing.Point(508, 87);
+            this.textBox_sdtnv.Name = "textBox_sdtnv";
+            this.textBox_sdtnv.Size = new System.Drawing.Size(161, 22);
+            this.textBox_sdtnv.TabIndex = 2;
             // 
             // label_diachinv
             // 
@@ -282,52 +316,23 @@
             this.label1.Text = "Thông tin chi tiết";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label_luongnv
+            // textBox_search
             // 
-            this.label_luongnv.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_luongnv.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.label_luongnv.Location = new System.Drawing.Point(368, 252);
-            this.label_luongnv.Name = "label_luongnv";
-            this.label_luongnv.Size = new System.Drawing.Size(141, 23);
-            this.label_luongnv.TabIndex = 1;
-            this.label_luongnv.Text = "Lương";
-            this.label_luongnv.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // textBox3
-            // 
-            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.textBox3.Location = new System.Drawing.Point(508, 253);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(161, 22);
-            this.textBox3.TabIndex = 2;
-            // 
-            // panel8
-            // 
-            this.panel8.BackColor = System.Drawing.Color.White;
-            this.panel8.Location = new System.Drawing.Point(373, 281);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(354, 1);
-            this.panel8.TabIndex = 3;
-            // 
-            // textBox4
-            // 
-            this.textBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox4.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.textBox4.Location = new System.Drawing.Point(567, 405);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(153, 22);
-            this.textBox4.TabIndex = 2;
-            this.textBox4.Text = "Tìm kiếm";
+            this.textBox_search.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
+            this.textBox_search.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox_search.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_search.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.textBox_search.Location = new System.Drawing.Point(567, 368);
+            this.textBox_search.Name = "textBox_search";
+            this.textBox_search.Size = new System.Drawing.Size(153, 22);
+            this.textBox_search.TabIndex = 2;
+            this.textBox_search.Text = "Tìm kiếm";
+            this.textBox_search.Click += new System.EventHandler(this.TextBox_search_Click);
             // 
             // panel9
             // 
             this.panel9.BackColor = System.Drawing.Color.White;
-            this.panel9.Location = new System.Drawing.Point(562, 433);
+            this.panel9.Location = new System.Drawing.Point(562, 396);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(172, 1);
             this.panel9.TabIndex = 3;
@@ -337,40 +342,84 @@
             this.button_subTTCN_search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_subTTCN_search.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_subTTCN_search.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.button_subTTCN_search.Location = new System.Drawing.Point(740, 397);
+            this.button_subTTCN_search.Location = new System.Drawing.Point(740, 360);
             this.button_subTTCN_search.Name = "button_subTTCN_search";
             this.button_subTTCN_search.Size = new System.Drawing.Size(118, 37);
             this.button_subTTCN_search.TabIndex = 4;
             this.button_subTTCN_search.Text = "Tìm kiếm";
             this.button_subTTCN_search.UseVisualStyleBackColor = true;
+            this.button_subTTCN_search.Click += new System.EventHandler(this.Button_subTTCN_search_Click);
             // 
             // button_subTTCN_sort
             // 
             this.button_subTTCN_sort.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_subTTCN_sort.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_subTTCN_sort.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.button_subTTCN_sort.Location = new System.Drawing.Point(740, 510);
+            this.button_subTTCN_sort.Location = new System.Drawing.Point(740, 647);
             this.button_subTTCN_sort.Name = "button_subTTCN_sort";
             this.button_subTTCN_sort.Size = new System.Drawing.Size(118, 37);
             this.button_subTTCN_sort.TabIndex = 4;
             this.button_subTTCN_sort.Text = "Sắp xếp";
             this.button_subTTCN_sort.UseVisualStyleBackColor = true;
+            this.button_subTTCN_sort.Click += new System.EventHandler(this.Button_subTTCN_sort_Click);
             // 
-            // Form4
+            // button_subTTCN_add
+            // 
+            this.button_subTTCN_add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_subTTCN_add.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_subTTCN_add.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.button_subTTCN_add.Location = new System.Drawing.Point(740, 432);
+            this.button_subTTCN_add.Name = "button_subTTCN_add";
+            this.button_subTTCN_add.Size = new System.Drawing.Size(118, 37);
+            this.button_subTTCN_add.TabIndex = 5;
+            this.button_subTTCN_add.Text = "Thêm";
+            this.button_subTTCN_add.UseVisualStyleBackColor = true;
+            this.button_subTTCN_add.Click += new System.EventHandler(this.Button_subTTCN_add_Click);
+            // 
+            // button_subTTCN_update
+            // 
+            this.button_subTTCN_update.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_subTTCN_update.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_subTTCN_update.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.button_subTTCN_update.Location = new System.Drawing.Point(740, 504);
+            this.button_subTTCN_update.Name = "button_subTTCN_update";
+            this.button_subTTCN_update.Size = new System.Drawing.Size(118, 37);
+            this.button_subTTCN_update.TabIndex = 6;
+            this.button_subTTCN_update.Text = "Chỉnh sửa";
+            this.button_subTTCN_update.UseVisualStyleBackColor = true;
+            this.button_subTTCN_update.Click += new System.EventHandler(this.Button_subTTCN_update_Click);
+            // 
+            // button_subTTCN_delete
+            // 
+            this.button_subTTCN_delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_subTTCN_delete.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_subTTCN_delete.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.button_subTTCN_delete.Location = new System.Drawing.Point(740, 578);
+            this.button_subTTCN_delete.Name = "button_subTTCN_delete";
+            this.button_subTTCN_delete.Size = new System.Drawing.Size(118, 37);
+            this.button_subTTCN_delete.TabIndex = 7;
+            this.button_subTTCN_delete.Text = "Xóa";
+            this.button_subTTCN_delete.UseVisualStyleBackColor = true;
+            this.button_subTTCN_delete.Click += new System.EventHandler(this.Button_subTTCN_delete_Click);
+            // 
+            // FormNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
             this.ClientSize = new System.Drawing.Size(870, 955);
+            this.Controls.Add(this.button_subTTCN_delete);
+            this.Controls.Add(this.button_subTTCN_update);
+            this.Controls.Add(this.button_subTTCN_add);
             this.Controls.Add(this.button_subTTCN_sort);
             this.Controls.Add(this.button_subTTCN_search);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel9);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.textBox_search);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form4";
+            this.Name = "FormNhanVien";
             this.Text = "Form4";
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -398,17 +447,20 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox_sdtnv;
         private System.Windows.Forms.Label label_phonenv;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox_diachinv;
         private System.Windows.Forms.Label label_diachinv;
         private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox_luongnv;
         private System.Windows.Forms.Label label_luongnv;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBox_search;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Button button_subTTCN_search;
         private System.Windows.Forms.Button button_subTTCN_sort;
+        private System.Windows.Forms.Button button_subTTCN_add;
+        private System.Windows.Forms.Button button_subTTCN_update;
+        private System.Windows.Forms.Button button_subTTCN_delete;
     }
 }

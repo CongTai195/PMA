@@ -91,7 +91,8 @@ namespace UIDesign
 
         private void Button_subQLSPsub_show_Click(object sender, EventArgs e)
         {
-
+            FormSanPham f = new FormSanPham();
+            openChildform(f);
         }
         public Form activeForm = null;
         public void openChildform(Form childForm)
@@ -109,20 +110,14 @@ namespace UIDesign
 
         private void Button_subTTCN_show_Click(object sender, EventArgs e)
         {
-            Form4 f = new Form4();
+            FormNhanVien f = new FormNhanVien();
             openChildform(f);
         }
 
-        private void Button_subTTCN_add_Click(object sender, EventArgs e)
+        private void Button_subQLXNK_show_Click(object sender, EventArgs e)
         {
-            Form5 f = new Form5();
-            f.ShowDialog();
-        }
-
-        private void Button_subTTCN_update_Click(object sender, EventArgs e)
-        {
-            Form5 f = new Form5();
-            f.ShowDialog();
+            FormKho f = new FormKho();
+            openChildform(f);
         }
     }
 }

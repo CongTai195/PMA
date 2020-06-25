@@ -1,0 +1,621 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="SE_07Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Bill">
+          <Key>
+            <PropertyRef Name="bID" />
+          </Key>
+          <Property Name="bID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nvID" Type="int" Nullable="false" />
+          <Property Name="khID" Type="int" Nullable="false" />
+          <Property Name="Date" Type="date" Nullable="false" />
+          <Property Name="Time" Type="time" Precision="7" Nullable="false" />
+          <Property Name="Total" Type="nvarchar" MaxLength="12" Nullable="false" />
+        </EntityType>
+        <EntityType Name="DetailBill">
+          <Key>
+            <PropertyRef Name="stt" />
+          </Key>
+          <Property Name="stt" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="bID" Type="int" Nullable="false" />
+          <Property Name="spID" Type="int" Nullable="false" />
+          <Property Name="DVT" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="Quantity" Type="int" Nullable="false" />
+          <Property Name="Price" Type="nvarchar" MaxLength="12" Nullable="false" />
+        </EntityType>
+        <EntityType Name="HoatDong">
+          <Key>
+            <PropertyRef Name="hdID" />
+          </Key>
+          <Property Name="hdID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="hdName" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="KhachHang">
+          <Key>
+            <PropertyRef Name="khID" />
+          </Key>
+          <Property Name="khID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="khName" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="Age" Type="int" />
+          <Property Name="khPhone" Type="nvarchar" MaxLength="11" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Kho">
+          <Key>
+            <PropertyRef Name="kID" />
+          </Key>
+          <Property Name="kID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="hdID" Type="int" Nullable="false" />
+          <Property Name="spID" Type="int" Nullable="false" />
+          <Property Name="DVT" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="Quantity" Type="int" Nullable="false" />
+          <Property Name="MFG" Type="date" Nullable="false" />
+          <Property Name="EXP" Type="date" Nullable="false" />
+          <Property Name="Date" Type="date" Nullable="false" />
+        </EntityType>
+        <EntityType Name="LoaiSanPham">
+          <Key>
+            <PropertyRef Name="lID" />
+          </Key>
+          <Property Name="lID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TypeName" Type="nvarchar" MaxLength="30" Nullable="false" />
+        </EntityType>
+        <EntityType Name="NhanVien">
+          <Key>
+            <PropertyRef Name="nvID" />
+          </Key>
+          <Property Name="nvID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nvName" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="nvDOB" Type="date" Nullable="false" />
+          <Property Name="nvIDNumber" Type="nvarchar" MaxLength="13" Nullable="false" />
+          <Property Name="nvPhone" Type="nvarchar" MaxLength="11" Nullable="false" />
+          <Property Name="nvAddress" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="DayOn" Type="int" Nullable="false" />
+          <Property Name="DayOff" Type="int" Nullable="false" />
+          <Property Name="Salary" Type="nvarchar" MaxLength="12" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SanPham">
+          <Key>
+            <PropertyRef Name="spID" />
+          </Key>
+          <Property Name="spID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="lID" Type="int" Nullable="false" />
+          <Property Name="spName" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="Unit" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="Price" Type="nvarchar" MaxLength="12" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TaiKhoan">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Type" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="nvID" Type="int" Nullable="false" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="Pass" Type="nvarchar" MaxLength="30" Nullable="false" />
+        </EntityType>
+        <Association Name="FK__Bill__khID__5DCAEF64">
+          <End Role="KhachHang" Type="Self.KhachHang" Multiplicity="1" />
+          <End Role="Bill" Type="Self.Bill" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="KhachHang">
+              <PropertyRef Name="khID" />
+            </Principal>
+            <Dependent Role="Bill">
+              <PropertyRef Name="khID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Bill__nvID__5CD6CB2B">
+          <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="1" />
+          <End Role="Bill" Type="Self.Bill" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NhanVien">
+              <PropertyRef Name="nvID" />
+            </Principal>
+            <Dependent Role="Bill">
+              <PropertyRef Name="nvID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__DetailBill__bID__619B8048">
+          <End Role="Bill" Type="Self.Bill" Multiplicity="1" />
+          <End Role="DetailBill" Type="Self.DetailBill" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Bill">
+              <PropertyRef Name="bID" />
+            </Principal>
+            <Dependent Role="DetailBill">
+              <PropertyRef Name="bID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__DetailBill__spID__628FA481">
+          <End Role="SanPham" Type="Self.SanPham" Multiplicity="1" />
+          <End Role="DetailBill" Type="Self.DetailBill" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SanPham">
+              <PropertyRef Name="spID" />
+            </Principal>
+            <Dependent Role="DetailBill">
+              <PropertyRef Name="spID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Kho__hdID__571DF1D5">
+          <End Role="HoatDong" Type="Self.HoatDong" Multiplicity="1" />
+          <End Role="Kho" Type="Self.Kho" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HoatDong">
+              <PropertyRef Name="hdID" />
+            </Principal>
+            <Dependent Role="Kho">
+              <PropertyRef Name="hdID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Kho__spID__5812160E">
+          <End Role="SanPham" Type="Self.SanPham" Multiplicity="1" />
+          <End Role="Kho" Type="Self.Kho" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SanPham">
+              <PropertyRef Name="spID" />
+            </Principal>
+            <Dependent Role="Kho">
+              <PropertyRef Name="spID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__SanPham__lID__534D60F1">
+          <End Role="LoaiSanPham" Type="Self.LoaiSanPham" Multiplicity="1" />
+          <End Role="SanPham" Type="Self.SanPham" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LoaiSanPham">
+              <PropertyRef Name="lID" />
+            </Principal>
+            <Dependent Role="SanPham">
+              <PropertyRef Name="lID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__TaiKhoan__nvID__02FC7413">
+          <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="1" />
+          <End Role="TaiKhoan" Type="Self.TaiKhoan" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NhanVien">
+              <PropertyRef Name="nvID" />
+            </Principal>
+            <Dependent Role="TaiKhoan">
+              <PropertyRef Name="nvID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="SE_07ModelStoreContainer">
+          <EntitySet Name="Bill" EntityType="Self.Bill" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DetailBill" EntityType="Self.DetailBill" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="HoatDong" EntityType="Self.HoatDong" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="KhachHang" EntityType="Self.KhachHang" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Kho" EntityType="Self.Kho" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LoaiSanPham" EntityType="Self.LoaiSanPham" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="NhanVien" EntityType="Self.NhanVien" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SanPham" EntityType="Self.SanPham" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TaiKhoan" EntityType="Self.TaiKhoan" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__Bill__khID__5DCAEF64" Association="Self.FK__Bill__khID__5DCAEF64">
+            <End Role="KhachHang" EntitySet="KhachHang" />
+            <End Role="Bill" EntitySet="Bill" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Bill__nvID__5CD6CB2B" Association="Self.FK__Bill__nvID__5CD6CB2B">
+            <End Role="NhanVien" EntitySet="NhanVien" />
+            <End Role="Bill" EntitySet="Bill" />
+          </AssociationSet>
+          <AssociationSet Name="FK__DetailBill__bID__619B8048" Association="Self.FK__DetailBill__bID__619B8048">
+            <End Role="Bill" EntitySet="Bill" />
+            <End Role="DetailBill" EntitySet="DetailBill" />
+          </AssociationSet>
+          <AssociationSet Name="FK__DetailBill__spID__628FA481" Association="Self.FK__DetailBill__spID__628FA481">
+            <End Role="SanPham" EntitySet="SanPham" />
+            <End Role="DetailBill" EntitySet="DetailBill" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Kho__hdID__571DF1D5" Association="Self.FK__Kho__hdID__571DF1D5">
+            <End Role="HoatDong" EntitySet="HoatDong" />
+            <End Role="Kho" EntitySet="Kho" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Kho__spID__5812160E" Association="Self.FK__Kho__spID__5812160E">
+            <End Role="SanPham" EntitySet="SanPham" />
+            <End Role="Kho" EntitySet="Kho" />
+          </AssociationSet>
+          <AssociationSet Name="FK__SanPham__lID__534D60F1" Association="Self.FK__SanPham__lID__534D60F1">
+            <End Role="LoaiSanPham" EntitySet="LoaiSanPham" />
+            <End Role="SanPham" EntitySet="SanPham" />
+          </AssociationSet>
+          <AssociationSet Name="FK__TaiKhoan__nvID__02FC7413" Association="Self.FK__TaiKhoan__nvID__02FC7413">
+            <End Role="NhanVien" EntitySet="NhanVien" />
+            <End Role="TaiKhoan" EntitySet="TaiKhoan" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="SE_07Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Bill">
+          <Key>
+            <PropertyRef Name="bID" />
+          </Key>
+          <Property Name="bID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nvID" Type="Int32" Nullable="false" />
+          <Property Name="khID" Type="Int32" Nullable="false" />
+          <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Time" Type="Time" Nullable="false" Precision="7" />
+          <Property Name="Total" Type="String" MaxLength="12" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="KhachHang" Relationship="Self.FK__Bill__khID__5DCAEF64" FromRole="Bill" ToRole="KhachHang" />
+          <NavigationProperty Name="NhanVien" Relationship="Self.FK__Bill__nvID__5CD6CB2B" FromRole="Bill" ToRole="NhanVien" />
+          <NavigationProperty Name="DetailBills" Relationship="Self.FK__DetailBill__bID__619B8048" FromRole="Bill" ToRole="DetailBill" />
+        </EntityType>
+        <EntityType Name="DetailBill">
+          <Key>
+            <PropertyRef Name="stt" />
+          </Key>
+          <Property Name="stt" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="bID" Type="Int32" Nullable="false" />
+          <Property Name="spID" Type="Int32" Nullable="false" />
+          <Property Name="DVT" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Quantity" Type="Int32" Nullable="false" />
+          <Property Name="Price" Type="String" MaxLength="12" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Bill" Relationship="Self.FK__DetailBill__bID__619B8048" FromRole="DetailBill" ToRole="Bill" />
+          <NavigationProperty Name="SanPham" Relationship="Self.FK__DetailBill__spID__628FA481" FromRole="DetailBill" ToRole="SanPham" />
+        </EntityType>
+        <EntityType Name="HoatDong">
+          <Key>
+            <PropertyRef Name="hdID" />
+          </Key>
+          <Property Name="hdID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="hdName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Khoes" Relationship="Self.FK__Kho__hdID__571DF1D5" FromRole="HoatDong" ToRole="Kho" />
+        </EntityType>
+        <EntityType Name="KhachHang">
+          <Key>
+            <PropertyRef Name="khID" />
+          </Key>
+          <Property Name="khID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="khName" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Age" Type="Int32" />
+          <Property Name="khPhone" Type="String" MaxLength="11" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Bills" Relationship="Self.FK__Bill__khID__5DCAEF64" FromRole="KhachHang" ToRole="Bill" />
+        </EntityType>
+        <EntityType Name="Kho">
+          <Key>
+            <PropertyRef Name="kID" />
+          </Key>
+          <Property Name="kID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="hdID" Type="Int32" Nullable="false" />
+          <Property Name="spID" Type="Int32" Nullable="false" />
+          <Property Name="DVT" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Quantity" Type="Int32" Nullable="false" />
+          <Property Name="MFG" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="EXP" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
+          <NavigationProperty Name="HoatDong" Relationship="Self.FK__Kho__hdID__571DF1D5" FromRole="Kho" ToRole="HoatDong" />
+          <NavigationProperty Name="SanPham" Relationship="Self.FK__Kho__spID__5812160E" FromRole="Kho" ToRole="SanPham" />
+        </EntityType>
+        <EntityType Name="LoaiSanPham">
+          <Key>
+            <PropertyRef Name="lID" />
+          </Key>
+          <Property Name="lID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TypeName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="SanPhams" Relationship="Self.FK__SanPham__lID__534D60F1" FromRole="LoaiSanPham" ToRole="SanPham" />
+        </EntityType>
+        <EntityType Name="NhanVien">
+          <Key>
+            <PropertyRef Name="nvID" />
+          </Key>
+          <Property Name="nvID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nvName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="nvDOB" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="nvIDNumber" Type="String" MaxLength="13" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="nvPhone" Type="String" MaxLength="11" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="nvAddress" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="DayOn" Type="Int32" Nullable="false" />
+          <Property Name="DayOff" Type="Int32" Nullable="false" />
+          <Property Name="Salary" Type="String" MaxLength="12" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Bills" Relationship="Self.FK__Bill__nvID__5CD6CB2B" FromRole="NhanVien" ToRole="Bill" />
+          <NavigationProperty Name="TaiKhoans" Relationship="Self.FK__TaiKhoan__nvID__02FC7413" FromRole="NhanVien" ToRole="TaiKhoan" />
+        </EntityType>
+        <EntityType Name="SanPham">
+          <Key>
+            <PropertyRef Name="spID" />
+          </Key>
+          <Property Name="spID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="lID" Type="Int32" Nullable="false" />
+          <Property Name="spName" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Unit" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Price" Type="String" MaxLength="12" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="DetailBills" Relationship="Self.FK__DetailBill__spID__628FA481" FromRole="SanPham" ToRole="DetailBill" />
+          <NavigationProperty Name="Khoes" Relationship="Self.FK__Kho__spID__5812160E" FromRole="SanPham" ToRole="Kho" />
+          <NavigationProperty Name="LoaiSanPham" Relationship="Self.FK__SanPham__lID__534D60F1" FromRole="SanPham" ToRole="LoaiSanPham" />
+        </EntityType>
+        <EntityType Name="TaiKhoan">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Type" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="nvID" Type="Int32" Nullable="false" />
+          <Property Name="UserName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Pass" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="NhanVien" Relationship="Self.FK__TaiKhoan__nvID__02FC7413" FromRole="TaiKhoan" ToRole="NhanVien" />
+        </EntityType>
+        <Association Name="FK__Bill__khID__5DCAEF64">
+          <End Role="KhachHang" Type="Self.KhachHang" Multiplicity="1" />
+          <End Role="Bill" Type="Self.Bill" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="KhachHang">
+              <PropertyRef Name="khID" />
+            </Principal>
+            <Dependent Role="Bill">
+              <PropertyRef Name="khID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Bill__nvID__5CD6CB2B">
+          <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="1" />
+          <End Role="Bill" Type="Self.Bill" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NhanVien">
+              <PropertyRef Name="nvID" />
+            </Principal>
+            <Dependent Role="Bill">
+              <PropertyRef Name="nvID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__DetailBill__bID__619B8048">
+          <End Role="Bill" Type="Self.Bill" Multiplicity="1" />
+          <End Role="DetailBill" Type="Self.DetailBill" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Bill">
+              <PropertyRef Name="bID" />
+            </Principal>
+            <Dependent Role="DetailBill">
+              <PropertyRef Name="bID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__DetailBill__spID__628FA481">
+          <End Role="SanPham" Type="Self.SanPham" Multiplicity="1" />
+          <End Role="DetailBill" Type="Self.DetailBill" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SanPham">
+              <PropertyRef Name="spID" />
+            </Principal>
+            <Dependent Role="DetailBill">
+              <PropertyRef Name="spID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Kho__hdID__571DF1D5">
+          <End Role="HoatDong" Type="Self.HoatDong" Multiplicity="1" />
+          <End Role="Kho" Type="Self.Kho" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HoatDong">
+              <PropertyRef Name="hdID" />
+            </Principal>
+            <Dependent Role="Kho">
+              <PropertyRef Name="hdID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Kho__spID__5812160E">
+          <End Role="SanPham" Type="Self.SanPham" Multiplicity="1" />
+          <End Role="Kho" Type="Self.Kho" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SanPham">
+              <PropertyRef Name="spID" />
+            </Principal>
+            <Dependent Role="Kho">
+              <PropertyRef Name="spID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__SanPham__lID__534D60F1">
+          <End Role="LoaiSanPham" Type="Self.LoaiSanPham" Multiplicity="1" />
+          <End Role="SanPham" Type="Self.SanPham" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LoaiSanPham">
+              <PropertyRef Name="lID" />
+            </Principal>
+            <Dependent Role="SanPham">
+              <PropertyRef Name="lID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__TaiKhoan__nvID__02FC7413">
+          <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="1" />
+          <End Role="TaiKhoan" Type="Self.TaiKhoan" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NhanVien">
+              <PropertyRef Name="nvID" />
+            </Principal>
+            <Dependent Role="TaiKhoan">
+              <PropertyRef Name="nvID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="SE_07" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Bills" EntityType="Self.Bill" />
+          <EntitySet Name="DetailBills" EntityType="Self.DetailBill" />
+          <EntitySet Name="HoatDongs" EntityType="Self.HoatDong" />
+          <EntitySet Name="KhachHangs" EntityType="Self.KhachHang" />
+          <EntitySet Name="Khoes" EntityType="Self.Kho" />
+          <EntitySet Name="LoaiSanPhams" EntityType="Self.LoaiSanPham" />
+          <EntitySet Name="NhanViens" EntityType="Self.NhanVien" />
+          <EntitySet Name="SanPhams" EntityType="Self.SanPham" />
+          <EntitySet Name="TaiKhoans" EntityType="Self.TaiKhoan" />
+          <AssociationSet Name="FK__Bill__khID__5DCAEF64" Association="Self.FK__Bill__khID__5DCAEF64">
+            <End Role="KhachHang" EntitySet="KhachHangs" />
+            <End Role="Bill" EntitySet="Bills" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Bill__nvID__5CD6CB2B" Association="Self.FK__Bill__nvID__5CD6CB2B">
+            <End Role="NhanVien" EntitySet="NhanViens" />
+            <End Role="Bill" EntitySet="Bills" />
+          </AssociationSet>
+          <AssociationSet Name="FK__DetailBill__bID__619B8048" Association="Self.FK__DetailBill__bID__619B8048">
+            <End Role="Bill" EntitySet="Bills" />
+            <End Role="DetailBill" EntitySet="DetailBills" />
+          </AssociationSet>
+          <AssociationSet Name="FK__DetailBill__spID__628FA481" Association="Self.FK__DetailBill__spID__628FA481">
+            <End Role="SanPham" EntitySet="SanPhams" />
+            <End Role="DetailBill" EntitySet="DetailBills" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Kho__hdID__571DF1D5" Association="Self.FK__Kho__hdID__571DF1D5">
+            <End Role="HoatDong" EntitySet="HoatDongs" />
+            <End Role="Kho" EntitySet="Khoes" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Kho__spID__5812160E" Association="Self.FK__Kho__spID__5812160E">
+            <End Role="SanPham" EntitySet="SanPhams" />
+            <End Role="Kho" EntitySet="Khoes" />
+          </AssociationSet>
+          <AssociationSet Name="FK__SanPham__lID__534D60F1" Association="Self.FK__SanPham__lID__534D60F1">
+            <End Role="LoaiSanPham" EntitySet="LoaiSanPhams" />
+            <End Role="SanPham" EntitySet="SanPhams" />
+          </AssociationSet>
+          <AssociationSet Name="FK__TaiKhoan__nvID__02FC7413" Association="Self.FK__TaiKhoan__nvID__02FC7413">
+            <End Role="NhanVien" EntitySet="NhanViens" />
+            <End Role="TaiKhoan" EntitySet="TaiKhoans" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="SE_07ModelStoreContainer" CdmEntityContainer="SE_07">
+          <EntitySetMapping Name="Bills">
+            <EntityTypeMapping TypeName="SE_07Model.Bill">
+              <MappingFragment StoreEntitySet="Bill">
+                <ScalarProperty Name="bID" ColumnName="bID" />
+                <ScalarProperty Name="nvID" ColumnName="nvID" />
+                <ScalarProperty Name="khID" ColumnName="khID" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="Time" ColumnName="Time" />
+                <ScalarProperty Name="Total" ColumnName="Total" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DetailBills">
+            <EntityTypeMapping TypeName="SE_07Model.DetailBill">
+              <MappingFragment StoreEntitySet="DetailBill">
+                <ScalarProperty Name="stt" ColumnName="stt" />
+                <ScalarProperty Name="bID" ColumnName="bID" />
+                <ScalarProperty Name="spID" ColumnName="spID" />
+                <ScalarProperty Name="DVT" ColumnName="DVT" />
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HoatDongs">
+            <EntityTypeMapping TypeName="SE_07Model.HoatDong">
+              <MappingFragment StoreEntitySet="HoatDong">
+                <ScalarProperty Name="hdID" ColumnName="hdID" />
+                <ScalarProperty Name="hdName" ColumnName="hdName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="KhachHangs">
+            <EntityTypeMapping TypeName="SE_07Model.KhachHang">
+              <MappingFragment StoreEntitySet="KhachHang">
+                <ScalarProperty Name="khID" ColumnName="khID" />
+                <ScalarProperty Name="khName" ColumnName="khName" />
+                <ScalarProperty Name="Age" ColumnName="Age" />
+                <ScalarProperty Name="khPhone" ColumnName="khPhone" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Khoes">
+            <EntityTypeMapping TypeName="SE_07Model.Kho">
+              <MappingFragment StoreEntitySet="Kho">
+                <ScalarProperty Name="kID" ColumnName="kID" />
+                <ScalarProperty Name="hdID" ColumnName="hdID" />
+                <ScalarProperty Name="spID" ColumnName="spID" />
+                <ScalarProperty Name="DVT" ColumnName="DVT" />
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+                <ScalarProperty Name="MFG" ColumnName="MFG" />
+                <ScalarProperty Name="EXP" ColumnName="EXP" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LoaiSanPhams">
+            <EntityTypeMapping TypeName="SE_07Model.LoaiSanPham">
+              <MappingFragment StoreEntitySet="LoaiSanPham">
+                <ScalarProperty Name="lID" ColumnName="lID" />
+                <ScalarProperty Name="TypeName" ColumnName="TypeName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="NhanViens">
+            <EntityTypeMapping TypeName="SE_07Model.NhanVien">
+              <MappingFragment StoreEntitySet="NhanVien">
+                <ScalarProperty Name="nvID" ColumnName="nvID" />
+                <ScalarProperty Name="nvName" ColumnName="nvName" />
+                <ScalarProperty Name="nvDOB" ColumnName="nvDOB" />
+                <ScalarProperty Name="nvIDNumber" ColumnName="nvIDNumber" />
+                <ScalarProperty Name="nvPhone" ColumnName="nvPhone" />
+                <ScalarProperty Name="nvAddress" ColumnName="nvAddress" />
+                <ScalarProperty Name="DayOn" ColumnName="DayOn" />
+                <ScalarProperty Name="DayOff" ColumnName="DayOff" />
+                <ScalarProperty Name="Salary" ColumnName="Salary" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SanPhams">
+            <EntityTypeMapping TypeName="SE_07Model.SanPham">
+              <MappingFragment StoreEntitySet="SanPham">
+                <ScalarProperty Name="spID" ColumnName="spID" />
+                <ScalarProperty Name="lID" ColumnName="lID" />
+                <ScalarProperty Name="spName" ColumnName="spName" />
+                <ScalarProperty Name="Unit" ColumnName="Unit" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TaiKhoans">
+            <EntityTypeMapping TypeName="SE_07Model.TaiKhoan">
+              <MappingFragment StoreEntitySet="TaiKhoan">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="nvID" ColumnName="nvID" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="Pass" ColumnName="Pass" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,6 +1,6 @@
 ﻿namespace UIDesign
 {
-    partial class Form5
+    partial class SubFormNhanVien
     {
         /// <summary>
         /// Required designer variable.
@@ -41,10 +41,10 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.textBox_cmndnv = new System.Windows.Forms.TextBox();
             this.label_cmndnv = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox_luongnv = new System.Windows.Forms.TextBox();
+            this.textBox_diachinv = new System.Windows.Forms.TextBox();
             this.label_luongnv = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox_phonenv = new System.Windows.Forms.TextBox();
             this.label_diachinv = new System.Windows.Forms.Label();
             this.textBox_namenv = new System.Windows.Forms.TextBox();
             this.label_phonenv = new System.Windows.Forms.Label();
@@ -177,27 +177,27 @@
             this.label_cmndnv.Text = "CMND";
             this.label_cmndnv.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox3
+            // textBox_luongnv
             // 
-            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.textBox3.Location = new System.Drawing.Point(564, 301);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(161, 22);
-            this.textBox3.TabIndex = 13;
+            this.textBox_luongnv.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
+            this.textBox_luongnv.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox_luongnv.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_luongnv.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.textBox_luongnv.Location = new System.Drawing.Point(564, 301);
+            this.textBox_luongnv.Name = "textBox_luongnv";
+            this.textBox_luongnv.Size = new System.Drawing.Size(161, 22);
+            this.textBox_luongnv.TabIndex = 13;
             // 
-            // textBox2
+            // textBox_diachinv
             // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.textBox2.Location = new System.Drawing.Point(564, 223);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(161, 22);
-            this.textBox2.TabIndex = 14;
+            this.textBox_diachinv.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
+            this.textBox_diachinv.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox_diachinv.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_diachinv.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.textBox_diachinv.Location = new System.Drawing.Point(564, 223);
+            this.textBox_diachinv.Name = "textBox_diachinv";
+            this.textBox_diachinv.Size = new System.Drawing.Size(161, 22);
+            this.textBox_diachinv.TabIndex = 14;
             // 
             // label_luongnv
             // 
@@ -210,16 +210,16 @@
             this.label_luongnv.Text = "Lương";
             this.label_luongnv.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox1
+            // textBox_phonenv
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.textBox1.Location = new System.Drawing.Point(564, 135);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(161, 22);
-            this.textBox1.TabIndex = 15;
+            this.textBox_phonenv.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
+            this.textBox_phonenv.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox_phonenv.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_phonenv.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.textBox_phonenv.Location = new System.Drawing.Point(564, 135);
+            this.textBox_phonenv.Name = "textBox_phonenv";
+            this.textBox_phonenv.Size = new System.Drawing.Size(161, 22);
+            this.textBox_phonenv.TabIndex = 15;
             // 
             // label_diachinv
             // 
@@ -302,7 +302,7 @@
             this.button_cancel.UseVisualStyleBackColor = true;
             this.button_cancel.Click += new System.EventHandler(this.Button_cancel_Click);
             // 
-            // Form5
+            // SubFormNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -319,10 +319,10 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.textBox_cmndnv);
             this.Controls.Add(this.label_cmndnv);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBox_luongnv);
+            this.Controls.Add(this.textBox_diachinv);
             this.Controls.Add(this.label_luongnv);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBox_phonenv);
             this.Controls.Add(this.label_diachinv);
             this.Controls.Add(this.textBox_namenv);
             this.Controls.Add(this.label_phonenv);
@@ -330,7 +330,7 @@
             this.Controls.Add(this.label_namenv);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form5";
+            this.Name = "SubFormNhanVien";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form5";
             this.panel1.ResumeLayout(false);
@@ -355,10 +355,10 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox textBox_cmndnv;
         private System.Windows.Forms.Label label_cmndnv;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox_luongnv;
+        private System.Windows.Forms.TextBox textBox_diachinv;
         private System.Windows.Forms.Label label_luongnv;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox_phonenv;
         private System.Windows.Forms.Label label_diachinv;
         private System.Windows.Forms.TextBox textBox_namenv;
         private System.Windows.Forms.Label label_phonenv;

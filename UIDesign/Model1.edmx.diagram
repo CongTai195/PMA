@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="32b577491d0445cab90a5ceccd505907" Name="Diagram1">
+        <EntityTypeShape EntityType="SE_07Model.Bill" Width="1.5" PointX="3" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SE_07Model.DetailBill" Width="1.5" PointX="5.25" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SE_07Model.HoatDong" Width="1.5" PointX="6" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SE_07Model.KhachHang" Width="1.5" PointX="0.75" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SE_07Model.Kho" Width="1.5" PointX="8.25" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SE_07Model.LoaiSanPham" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SE_07Model.NhanVien" Width="1.5" PointX="0.75" PointY="10.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SE_07Model.SanPham" Width="1.5" PointX="3" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SE_07Model.TaiKhoan" Width="1.5" PointX="3" PointY="12.875" IsExpanded="true" />
+        <AssociationConnector Association="SE_07Model.FK__Bill__khID__5DCAEF64" ManuallyRouted="false" />
+        <AssociationConnector Association="SE_07Model.FK__Bill__nvID__5CD6CB2B" ManuallyRouted="false" />
+        <AssociationConnector Association="SE_07Model.FK__DetailBill__bID__619B8048" ManuallyRouted="false" />
+        <AssociationConnector Association="SE_07Model.FK__DetailBill__spID__628FA481" ManuallyRouted="false" />
+        <AssociationConnector Association="SE_07Model.FK__Kho__hdID__571DF1D5" ManuallyRouted="false" />
+        <AssociationConnector Association="SE_07Model.FK__Kho__spID__5812160E" ManuallyRouted="false" />
+        <AssociationConnector Association="SE_07Model.FK__SanPham__lID__534D60F1" ManuallyRouted="false" />
+        <AssociationConnector Association="SE_07Model.FK__TaiKhoan__nvID__02FC7413" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
