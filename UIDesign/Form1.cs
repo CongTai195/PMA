@@ -50,7 +50,7 @@ namespace UIDesign
 
         private void Form1_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar == 13 || e.KeyChar == 108)
+            if (e.KeyChar == 13 )
             {
                 string user = textBox1.Text;
                 string pass = textBox2.Text;

@@ -18,7 +18,6 @@ namespace UIDesign
             InitializeComponent();
             ShowDTGV();
         }
-
         private void Button_back_Click(object sender, EventArgs e)
         {
             this.Dispose();
