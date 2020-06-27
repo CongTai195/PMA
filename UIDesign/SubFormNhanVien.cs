@@ -58,7 +58,7 @@ namespace UIDesign
             {
                 try
                 {
-                    int nvid = 1;
+                    //int nvid = 1;
                     string namenv = textBox_namenv.Text;
                     DateTime dob = dateTimePicker1.Value.Date;
                     string diachi = textBox_diachinv.Text;
@@ -67,7 +67,7 @@ namespace UIDesign
                     string luong = textBox_luongnv.Text;
                     NhanVien nv = new NhanVien
                     {
-                        nvID = nvid,
+                        //nvID = nvid,
                         nvName = namenv,
                         nvDOB = dob,
                         nvAddress = diachi,

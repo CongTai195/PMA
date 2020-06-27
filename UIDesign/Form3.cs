@@ -77,7 +77,7 @@ namespace UIDesign
 
         private void Button_subQLBH_add_Click(object sender, EventArgs e)
         {
-            openChildform(new Form6());
+            openChildform(new FormHoaDon());
         }
 
         private void Button_subQLSP_QLSP_Click(object sender, EventArgs e)
@@ -89,6 +89,12 @@ namespace UIDesign
         private void Button_subQLK_QLXNK_Click(object sender, EventArgs e)
         {
             FormKho f = new FormKho("nhanvien");
+            openChildform(f);
+        }
+
+        private void Button_subQLKH_show_Click(object sender, EventArgs e)
+        {
+            FormKhachHang f = new FormKhachHang();
             openChildform(f);
         }
     }

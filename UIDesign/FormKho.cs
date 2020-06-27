@@ -108,7 +108,6 @@ namespace UIDesign
         private void Button_subQLK_search_Click(object sender, EventArgs e)
         {
             if (textBox_search.Text == "Tìm kiếm") textBox_search.Clear();
-            SE_07 db = new SE_07();
             int kid = ((CBBItems)comboBox_hoatdong.SelectedItem).Value;
             dataGridView1.DataSource = (BLL_Kho.Instance.Search_Bll(kid,textBox_search.Text)).Select(p => new { p.kID, p.HoatDong.hdName, p.SanPham.spName, p.DVT, p.Quantity, p.MFG, p.EXP, p.Date }).ToList();
         }
@@ -139,7 +138,6 @@ namespace UIDesign
 
         private void Button_subQLK_delete_Click(object sender, EventArgs e)
         {
-            SE_07 db = new SE_07();
             DataGridViewSelectedRowCollection r = dataGridView1.SelectedRows;
             if (r.Count != 0)
             {

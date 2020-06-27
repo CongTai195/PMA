@@ -32,9 +32,6 @@
             this.button_logout = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.QLKH_subpanel = new System.Windows.Forms.Panel();
-            this.button_subQLKH_del = new System.Windows.Forms.Button();
-            this.button_subQLKH_update = new System.Windows.Forms.Button();
-            this.button_subQLKH_add = new System.Windows.Forms.Button();
             this.button_subQLKH_show = new System.Windows.Forms.Button();
             this.button_QLKH = new System.Windows.Forms.Button();
             this.QLK_subpanel = new System.Windows.Forms.Panel();
@@ -104,75 +101,12 @@
             // 
             // QLKH_subpanel
             // 
-            this.QLKH_subpanel.Controls.Add(this.button_subQLKH_del);
-            this.QLKH_subpanel.Controls.Add(this.button_subQLKH_update);
-            this.QLKH_subpanel.Controls.Add(this.button_subQLKH_add);
             this.QLKH_subpanel.Controls.Add(this.button_subQLKH_show);
             this.QLKH_subpanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.QLKH_subpanel.Location = new System.Drawing.Point(0, 679);
             this.QLKH_subpanel.Name = "QLKH_subpanel";
-            this.QLKH_subpanel.Size = new System.Drawing.Size(330, 164);
+            this.QLKH_subpanel.Size = new System.Drawing.Size(330, 42);
             this.QLKH_subpanel.TabIndex = 9;
-            // 
-            // button_subQLKH_del
-            // 
-            this.button_subQLKH_del.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.button_subQLKH_del.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button_subQLKH_del.FlatAppearance.BorderSize = 0;
-            this.button_subQLKH_del.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_subQLKH_del.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_subQLKH_del.ForeColor = System.Drawing.SystemColors.MenuBar;
-            this.button_subQLKH_del.Image = ((System.Drawing.Image)(resources.GetObject("button_subQLKH_del.Image")));
-            this.button_subQLKH_del.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_subQLKH_del.Location = new System.Drawing.Point(0, 120);
-            this.button_subQLKH_del.Name = "button_subQLKH_del";
-            this.button_subQLKH_del.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.button_subQLKH_del.Size = new System.Drawing.Size(330, 40);
-            this.button_subQLKH_del.TabIndex = 8;
-            this.button_subQLKH_del.Text = "Xóa";
-            this.button_subQLKH_del.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_subQLKH_del.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button_subQLKH_del.UseVisualStyleBackColor = false;
-            // 
-            // button_subQLKH_update
-            // 
-            this.button_subQLKH_update.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.button_subQLKH_update.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button_subQLKH_update.FlatAppearance.BorderSize = 0;
-            this.button_subQLKH_update.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_subQLKH_update.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_subQLKH_update.ForeColor = System.Drawing.SystemColors.MenuBar;
-            this.button_subQLKH_update.Image = ((System.Drawing.Image)(resources.GetObject("button_subQLKH_update.Image")));
-            this.button_subQLKH_update.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_subQLKH_update.Location = new System.Drawing.Point(0, 80);
-            this.button_subQLKH_update.Name = "button_subQLKH_update";
-            this.button_subQLKH_update.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.button_subQLKH_update.Size = new System.Drawing.Size(330, 40);
-            this.button_subQLKH_update.TabIndex = 7;
-            this.button_subQLKH_update.Text = "Chỉnh sửa thông tin";
-            this.button_subQLKH_update.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_subQLKH_update.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button_subQLKH_update.UseVisualStyleBackColor = false;
-            // 
-            // button_subQLKH_add
-            // 
-            this.button_subQLKH_add.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.button_subQLKH_add.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button_subQLKH_add.FlatAppearance.BorderSize = 0;
-            this.button_subQLKH_add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_subQLKH_add.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_subQLKH_add.ForeColor = System.Drawing.SystemColors.MenuBar;
-            this.button_subQLKH_add.Image = ((System.Drawing.Image)(resources.GetObject("button_subQLKH_add.Image")));
-            this.button_subQLKH_add.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_subQLKH_add.Location = new System.Drawing.Point(0, 40);
-            this.button_subQLKH_add.Name = "button_subQLKH_add";
-            this.button_subQLKH_add.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.button_subQLKH_add.Size = new System.Drawing.Size(330, 40);
-            this.button_subQLKH_add.TabIndex = 6;
-            this.button_subQLKH_add.Text = "Thêm khách hàng";
-            this.button_subQLKH_add.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_subQLKH_add.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button_subQLKH_add.UseVisualStyleBackColor = false;
             // 
             // button_subQLKH_show
             // 
@@ -193,6 +127,7 @@
             this.button_subQLKH_show.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_subQLKH_show.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button_subQLKH_show.UseVisualStyleBackColor = false;
+            this.button_subQLKH_show.Click += new System.EventHandler(this.Button_subQLKH_show_Click);
             // 
             // button_QLKH
             // 
@@ -630,9 +565,6 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button button_subQLBH_XHD;
         private System.Windows.Forms.Panel QLKH_subpanel;
-        private System.Windows.Forms.Button button_subQLKH_del;
-        private System.Windows.Forms.Button button_subQLKH_update;
-        private System.Windows.Forms.Button button_subQLKH_add;
         private System.Windows.Forms.Button button_subQLKH_show;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;

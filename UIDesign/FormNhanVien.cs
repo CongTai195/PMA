@@ -36,7 +36,6 @@ namespace UIDesign
         private void Button_subTTCN_search_Click(object sender, EventArgs e)
         {
             if (textBox_search.Text == "Tìm kiếm") textBox_search.Clear();
-            SE_07 db = new SE_07();
             dataGridView1.DataSource = BLL_NhanVien.Instance.Search_Bll(textBox_search.Text).Select(p => new { p.nvID, p.nvName, p.nvIDNumber, p.nvPhone, p.nvDOB, p.Salary, p.nvAddress }).ToList();
         }
         public void ShowDTGV()

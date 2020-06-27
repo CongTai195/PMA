@@ -111,7 +111,7 @@ namespace UIDesign
                     DateTime ngaythuchien = dateTimePicker3.Value.Date;
                     Kho kho = new Kho
                     {
-                        kID = 1,
+                        //kID = 1,
                         spID = ((CBBItems)comboBox_sanpham.SelectedItem).Value,
                         MFG = nsx,
                         EXP = hsd,

@@ -80,7 +80,6 @@ namespace UIDesign
         private void Button_subQLSP_search_Click(object sender, EventArgs e)
         {
             if (textBox_search.Text == "Tìm kiếm") textBox_search.Clear();
-            SE_07 db = new SE_07();
             int lid = ((CBBItems)comboBox2.SelectedItem).Value;
             dataGridView1.DataSource = BLL_SanPham.Instance.Search_Bll(lid, textBox_search.Text).Select(p => new { p.spID, p.spName, p.LoaiSanPham.TypeName, p.Unit, p.Price }).ToList();
         }

@@ -85,7 +85,7 @@ namespace UIDesign
                     string price = textBox_pricesp.Text;
                     SanPham sp = new SanPham
                     {
-                        spID = 1,
+                        //spID = 1,
                         spName = spname,
                         Unit = unit,
                         Price = price,

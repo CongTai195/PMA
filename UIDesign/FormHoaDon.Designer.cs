@@ -1,6 +1,6 @@
 ﻿namespace UIDesign
 {
-    partial class Form6
+    partial class FormHoaDon
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form6));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormHoaDon));
             this.panel1 = new System.Windows.Forms.Panel();
             this.button_back = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -57,9 +57,9 @@
             this.label_ageKH = new System.Windows.Forms.Label();
             this.label_phonekh = new System.Windows.Forms.Label();
             this.label_namekh = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.textBox_ageKH = new System.Windows.Forms.TextBox();
+            this.textBox_phoneKH = new System.Windows.Forms.TextBox();
+            this.textBox_nameKH = new System.Windows.Forms.TextBox();
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
@@ -321,6 +321,7 @@
             this.button_subQLKH_add.TabIndex = 15;
             this.button_subQLKH_add.Text = "Thêm khách hàng";
             this.button_subQLKH_add.UseVisualStyleBackColor = true;
+            this.button_subQLKH_add.Click += new System.EventHandler(this.Button_subQLKH_add_Click);
             // 
             // label_ageKH
             // 
@@ -355,38 +356,38 @@
             this.label_namekh.Text = "Tên khách hàng";
             this.label_namekh.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // textBox5
+            // textBox_ageKH
             // 
-            this.textBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
-            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox5.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.textBox5.Location = new System.Drawing.Point(624, 225);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(197, 22);
-            this.textBox5.TabIndex = 10;
+            this.textBox_ageKH.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
+            this.textBox_ageKH.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox_ageKH.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_ageKH.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.textBox_ageKH.Location = new System.Drawing.Point(624, 225);
+            this.textBox_ageKH.Name = "textBox_ageKH";
+            this.textBox_ageKH.Size = new System.Drawing.Size(197, 22);
+            this.textBox_ageKH.TabIndex = 10;
             // 
-            // textBox6
+            // textBox_phoneKH
             // 
-            this.textBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
-            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox6.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.textBox6.Location = new System.Drawing.Point(624, 313);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(197, 22);
-            this.textBox6.TabIndex = 10;
+            this.textBox_phoneKH.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
+            this.textBox_phoneKH.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox_phoneKH.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_phoneKH.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.textBox_phoneKH.Location = new System.Drawing.Point(624, 313);
+            this.textBox_phoneKH.Name = "textBox_phoneKH";
+            this.textBox_phoneKH.Size = new System.Drawing.Size(197, 22);
+            this.textBox_phoneKH.TabIndex = 10;
             // 
-            // textBox7
+            // textBox_nameKH
             // 
-            this.textBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
-            this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox7.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.textBox7.Location = new System.Drawing.Point(625, 129);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(197, 22);
-            this.textBox7.TabIndex = 9;
+            this.textBox_nameKH.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
+            this.textBox_nameKH.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox_nameKH.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_nameKH.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.textBox_nameKH.Location = new System.Drawing.Point(625, 129);
+            this.textBox_nameKH.Name = "textBox_nameKH";
+            this.textBox_nameKH.Size = new System.Drawing.Size(197, 22);
+            this.textBox_nameKH.TabIndex = 9;
             // 
             // panel9
             // 
@@ -447,11 +448,11 @@
             this.Controls.Add(this.label_thanhtien);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label_dongia);
-            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.textBox_nameKH);
             this.Controls.Add(this.textBox_cmndnv);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.textBox_phoneKH);
             this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.textBox_ageKH);
             this.Controls.Add(this.label_namekh);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label_phonekh);
@@ -503,9 +504,9 @@
         private System.Windows.Forms.Label label_ageKH;
         private System.Windows.Forms.Label label_phonekh;
         private System.Windows.Forms.Label label_namekh;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox textBox_ageKH;
+        private System.Windows.Forms.TextBox textBox_phoneKH;
+        private System.Windows.Forms.TextBox textBox_nameKH;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Panel panel11;

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UIDesign.BLL;
 
 namespace UIDesign
 {
@@ -15,7 +16,7 @@ namespace UIDesign
         public Form1()
         {
             InitializeComponent();
-            
+
         }
 
         private void Label1_Click(object sender, EventArgs e)
@@ -23,7 +24,6 @@ namespace UIDesign
             DialogResult d = MessageBox.Show("Bạn chắc  chắc muốn thoát chứ ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (d == DialogResult.No) return;
             if (d == DialogResult.Yes) this.Dispose();
-
         }
 
         private void TextBox1_Click(object sender, EventArgs e)
@@ -43,15 +43,18 @@ namespace UIDesign
 
         private void Button_login_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text == "admin") {
-                Form2 f = new Form2();
-                f.ShowDialog();
-               
-            }
-            if (textBox1.Text == "nhanvien")
+            string user = textBox1.Text;
+            string pass = textBox2.Text;
+            BLL_Login.Instance.LogIn(user, pass);
+        }
+
+        private void Form1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13 || e.KeyChar == 108)
             {
-                Form3 f = new Form3();
-                f.ShowDialog();
+                string user = textBox1.Text;
+                string pass = textBox2.Text;
+                BLL_Login.Instance.LogIn(user, pass);
             }
         }
     }
