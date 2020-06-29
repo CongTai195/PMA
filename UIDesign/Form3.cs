@@ -97,5 +97,11 @@ namespace UIDesign
             FormKhachHang f = new FormKhachHang();
             openChildform(f);
         }
+
+        private void Button_subQLBH_QLDH_Click(object sender, EventArgs e)
+        {
+            FormDonHang f = new FormDonHang();
+            openChildform(f);
+        }
     }
 }

@@ -119,5 +119,11 @@ namespace UIDesign
             FormKho f = new FormKho("admin");
             openChildform(f);
         }
+
+        private void Button_taotaikhoan_Click(object sender, EventArgs e)
+        {
+            SubFormTaiKhoan f = new SubFormTaiKhoan();
+            f.ShowDialog();
+        }
     }
 }

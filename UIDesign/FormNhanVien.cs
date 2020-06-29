@@ -61,15 +61,18 @@ namespace UIDesign
                 f.D += new SubFormNhanVien.MyDel(ShowDTGV);
                 f.ShowDialog();
             }
+            if (r.Count == 0)
+            {
+                MessageBox.Show("Vui lòng chọn 1 nhân viên để chỉnh sửa");
+            }
         }
 
         private void Button_subTTCN_delete_Click(object sender, EventArgs e)
         {
-            SE_07 db = new SE_07();
             DataGridViewSelectedRowCollection r = dataGridView1.SelectedRows;
             if (r.Count != 0)
             {
-                DialogResult dr = MessageBox.Show("Bạn chắc chắn muốn xóa hoạt động này chứ ?", "Thông báo", MessageBoxButtons.YesNo);
+                DialogResult dr = MessageBox.Show("Bạn chắc chắn muốn xóa nhân viên này chứ ?", "Thông báo", MessageBoxButtons.YesNo);
                 if (dr == DialogResult.Yes)
                 {
                     BLL_NhanVien.Instance.Del_Bll(r);
@@ -77,7 +80,7 @@ namespace UIDesign
                 }
                 if (dr == DialogResult.No) return;
             }
-            else MessageBox.Show("Bạn chưa chọn hoạt động nào để xóa !");
+            else MessageBox.Show("Bạn chưa chọn nhân viên nào để xóa !");
         }
 
         private void Button_subTTCN_sort_Click(object sender, EventArgs e)

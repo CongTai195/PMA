@@ -55,6 +55,18 @@ namespace UIDesign.BLL
                 MessageBox.Show(e.Message);
             }
         }
+        public void AddTaiKhoan_Bll(TaiKhoan tk)
+        {
+            try
+            {
+                SE_07 db = new SE_07();
+                db.TaiKhoans.Add(tk);
+                db.SaveChanges();
+            } catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
         public void Update_Bll(int NvID, string namenv, DateTime dob, string cmnd, string sdt, string diachi, string luong)
         {
             SE_07 db = new SE_07();

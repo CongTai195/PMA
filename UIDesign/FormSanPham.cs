@@ -107,15 +107,18 @@ namespace UIDesign
                 f.D += new SubFormSanPham.MyDel(ShowDTGV);
                 f.ShowDialog();
             }
+            if (r.Count == 0)
+            {
+                MessageBox.Show("Bạn chưa chọn sản phẩm nào để chỉnh sửa");
+            }
         }
 
         private void Button_subQLSP_delete_Click(object sender, EventArgs e)
         {
-            SE_07 db = new SE_07();
             DataGridViewSelectedRowCollection r = dataGridView1.SelectedRows;
             if (r.Count != 0)
             {
-                DialogResult dr = MessageBox.Show("Bạn chắc chắn muốn xóa hoạt động này chứ ?", "Thông báo", MessageBoxButtons.YesNo);
+                DialogResult dr = MessageBox.Show("Bạn chắc chắn muốn xóa sản phẩm này chứ ?", "Thông báo", MessageBoxButtons.YesNo);
                 if (dr == DialogResult.Yes)
                 {
                     BLL_SanPham.Instance.Del_Bll(r);
@@ -123,7 +126,7 @@ namespace UIDesign
                 }
                 if (dr == DialogResult.No) return;
             }
-            else MessageBox.Show("Bạn chưa chọn hoạt động nào để xóa !");
+            else MessageBox.Show("Bạn chưa chọn sản phẩm nào để xóa !");
         }
 
         private void Button_subQLSP_sort_Click(object sender, EventArgs e)
@@ -168,6 +171,11 @@ namespace UIDesign
                     }
                 }
             }
+        }
+
+        private void Button_subQLNV_addtaikhoan_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

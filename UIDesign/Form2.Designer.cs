@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             this.button_logout = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button_TKTC = new System.Windows.Forms.Button();
+            this.button_taotaikhoan = new System.Windows.Forms.Button();
             this.QLK_subpanel = new System.Windows.Forms.Panel();
             this.button_QLHTK = new System.Windows.Forms.Button();
             this.QLXNK_subpanel = new System.Windows.Forms.Panel();
@@ -89,7 +89,7 @@
             // 
             this.panel1.AutoScroll = true;
             this.panel1.BackColor = System.Drawing.SystemColors.InfoText;
-            this.panel1.Controls.Add(this.button_TKTC);
+            this.panel1.Controls.Add(this.button_taotaikhoan);
             this.panel1.Controls.Add(this.QLK_subpanel);
             this.panel1.Controls.Add(this.button_QLK);
             this.panel1.Controls.Add(this.QLSP_subpanel);
@@ -103,25 +103,25 @@
             this.panel1.Size = new System.Drawing.Size(330, 1055);
             this.panel1.TabIndex = 1;
             // 
-            // button_TKTC
+            // button_taotaikhoan
             // 
-            this.button_TKTC.BackColor = System.Drawing.SystemColors.InfoText;
-            this.button_TKTC.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button_TKTC.FlatAppearance.BorderSize = 0;
-            this.button_TKTC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_TKTC.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_TKTC.ForeColor = System.Drawing.SystemColors.Menu;
-            this.button_TKTC.Image = ((System.Drawing.Image)(resources.GetObject("button_TKTC.Image")));
-            this.button_TKTC.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_TKTC.Location = new System.Drawing.Point(0, 743);
-            this.button_TKTC.Name = "button_TKTC";
-            this.button_TKTC.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.button_TKTC.Size = new System.Drawing.Size(330, 60);
-            this.button_TKTC.TabIndex = 5;
-            this.button_TKTC.Text = "Thống kê thu chi";
-            this.button_TKTC.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_TKTC.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button_TKTC.UseVisualStyleBackColor = false;
+            this.button_taotaikhoan.BackColor = System.Drawing.SystemColors.InfoText;
+            this.button_taotaikhoan.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button_taotaikhoan.FlatAppearance.BorderSize = 0;
+            this.button_taotaikhoan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_taotaikhoan.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_taotaikhoan.ForeColor = System.Drawing.SystemColors.Menu;
+            this.button_taotaikhoan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_taotaikhoan.Location = new System.Drawing.Point(0, 743);
+            this.button_taotaikhoan.Name = "button_taotaikhoan";
+            this.button_taotaikhoan.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.button_taotaikhoan.Size = new System.Drawing.Size(330, 60);
+            this.button_taotaikhoan.TabIndex = 5;
+            this.button_taotaikhoan.Text = "Tạo tài khoản";
+            this.button_taotaikhoan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_taotaikhoan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button_taotaikhoan.UseVisualStyleBackColor = false;
+            this.button_taotaikhoan.Click += new System.EventHandler(this.Button_taotaikhoan_Click);
             // 
             // QLK_subpanel
             // 
@@ -605,7 +605,7 @@
         private System.Windows.Forms.Panel QLXNK_subpanel;
         private System.Windows.Forms.Button button_subQLXNK_show;
         private System.Windows.Forms.Button button_QLHTK;
-        private System.Windows.Forms.Button button_TKTC;
+        private System.Windows.Forms.Button button_taotaikhoan;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;

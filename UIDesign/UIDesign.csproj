@@ -61,6 +61,7 @@
     <Compile Include="Bill.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="BLL\BLL_Bill.cs" />
     <Compile Include="BLL\BLL_KhachHang.cs" />
     <Compile Include="BLL\BLL_Kho.cs" />
     <Compile Include="BLL\BLL_Login.cs" />
@@ -87,6 +88,12 @@
     </Compile>
     <Compile Include="Form3.Designer.cs">
       <DependentUpon>Form3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDonHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDonHang.Designer.cs">
+      <DependentUpon>FormDonHang.cs</DependentUpon>
     </Compile>
     <Compile Include="FormKhachHang.cs">
       <SubType>Form</SubType>
@@ -177,6 +184,12 @@
     <Compile Include="SubFormSanPham.Designer.cs">
       <DependentUpon>SubFormSanPham.cs</DependentUpon>
     </Compile>
+    <Compile Include="SubFormTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubFormTaiKhoan.Designer.cs">
+      <DependentUpon>SubFormTaiKhoan.cs</DependentUpon>
+    </Compile>
     <Compile Include="TaiKhoan.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -188,6 +201,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form3.resx">
       <DependentUpon>Form3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDonHang.resx">
+      <DependentUpon>FormDonHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormKhachHang.resx">
       <DependentUpon>FormKhachHang.cs</DependentUpon>
@@ -224,6 +240,9 @@
     </Compile>
     <EmbeddedResource Include="SubFormSanPham.resx">
       <DependentUpon>SubFormSanPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubFormTaiKhoan.resx">
+      <DependentUpon>SubFormTaiKhoan.cs</DependentUpon>
     </EmbeddedResource>
     <EntityDeploy Include="Model1.edmx">
       <Generator>EntityModelCodeGenerator</Generator>

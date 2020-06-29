@@ -274,6 +274,7 @@
             this.button_subQLBH_QLDH.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_subQLBH_QLDH.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button_subQLBH_QLDH.UseVisualStyleBackColor = false;
+            this.button_subQLBH_QLDH.Click += new System.EventHandler(this.Button_subQLBH_QLDH_Click);
             // 
             // button_subQLBH_add
             // 

@@ -78,7 +78,7 @@
             this.label_add.Name = "label_add";
             this.label_add.Size = new System.Drawing.Size(870, 64);
             this.label_add.TabIndex = 1;
-            this.label_add.Text = "Thêm sản phẩm";
+            this.label_add.Text = "Thêm khách hàng";
             this.label_add.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label1

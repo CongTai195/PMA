@@ -178,7 +178,7 @@ namespace UIDesign
                 dateTimePicker1.Value = Convert.ToDateTime(db.Khoes.Where(p => p.kID == kid).Select(p => p.MFG).FirstOrDefault().ToString());
                 dateTimePicker2.Value = Convert.ToDateTime(db.Khoes.Where(p => p.kID == kid).Select(p => p.EXP).FirstOrDefault().ToString());
                 dateTimePicker3.Value = Convert.ToDateTime(db.Khoes.Where(p => p.kID == kid).Select(p => p.Date).FirstOrDefault().ToString());
-                int spid = Convert.ToInt32(db.Khoes.Where(p => p.kID == kid).Select(p => p.SanPham.spID).FirstOrDefault());
+                int spid = Convert.ToInt32(db.Khoes.Where(p => p.kID == kid).Select(p => p.spID).FirstOrDefault());
                 foreach (CBBItems i in comboBox_sanpham.Items)
                 {
                     if (i.Value == spid)
