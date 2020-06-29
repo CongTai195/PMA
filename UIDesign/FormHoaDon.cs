@@ -152,7 +152,6 @@ namespace UIDesign
         private void Button_subQLBH_del_Click(object sender, EventArgs e)
         {
             DataGridViewSelectedRowCollection r = dataGridView1.SelectedRows;
-            SE_07 db = new SE_07();
             List<int> now = new List<int>();
             foreach (DataGridViewRow i in r)
             {

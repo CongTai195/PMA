@@ -131,7 +131,6 @@ namespace UIDesign
 
         private void Button_subQLSP_sort_Click(object sender, EventArgs e)
         {
-            SE_07 db = new SE_07();
             List<int> now = new List<int>();
             foreach (DataGridViewRow i in dataGridView1.Rows)
             {
