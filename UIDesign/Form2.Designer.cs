@@ -33,20 +33,16 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.button_taotaikhoan = new System.Windows.Forms.Button();
             this.QLK_subpanel = new System.Windows.Forms.Panel();
-            this.button_QLHTK = new System.Windows.Forms.Button();
             this.QLXNK_subpanel = new System.Windows.Forms.Panel();
             this.button_subQLXNK_show = new System.Windows.Forms.Button();
             this.button_subQLK_QLXNK = new System.Windows.Forms.Button();
             this.button_QLK = new System.Windows.Forms.Button();
             this.QLSP_subpanel = new System.Windows.Forms.Panel();
-            this.button_subQLSP_QLTKD = new System.Windows.Forms.Button();
             this.subQLSP_subpanel = new System.Windows.Forms.Panel();
             this.button_subQLSPsub_show = new System.Windows.Forms.Button();
             this.button_subQLSP_QLSP = new System.Windows.Forms.Button();
             this.button_QLSP = new System.Windows.Forms.Button();
             this.QLNV_subpanel = new System.Windows.Forms.Panel();
-            this.button_subQLNV_salary = new System.Windows.Forms.Button();
-            this.button_subQLNV_work = new System.Windows.Forms.Button();
             this.TTCN_subpanel = new System.Windows.Forms.Panel();
             this.button_subTTCN_show = new System.Windows.Forms.Button();
             this.button_subQLNV_TTCN = new System.Windows.Forms.Button();
@@ -112,7 +108,7 @@
             this.button_taotaikhoan.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_taotaikhoan.ForeColor = System.Drawing.SystemColors.Menu;
             this.button_taotaikhoan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_taotaikhoan.Location = new System.Drawing.Point(0, 743);
+            this.button_taotaikhoan.Location = new System.Drawing.Point(0, 550);
             this.button_taotaikhoan.Name = "button_taotaikhoan";
             this.button_taotaikhoan.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.button_taotaikhoan.Size = new System.Drawing.Size(330, 60);
@@ -126,34 +122,13 @@
             // QLK_subpanel
             // 
             this.QLK_subpanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.QLK_subpanel.Controls.Add(this.button_QLHTK);
             this.QLK_subpanel.Controls.Add(this.QLXNK_subpanel);
             this.QLK_subpanel.Controls.Add(this.button_subQLK_QLXNK);
             this.QLK_subpanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.QLK_subpanel.Location = new System.Drawing.Point(0, 603);
+            this.QLK_subpanel.Location = new System.Drawing.Point(0, 460);
             this.QLK_subpanel.Name = "QLK_subpanel";
-            this.QLK_subpanel.Size = new System.Drawing.Size(330, 140);
+            this.QLK_subpanel.Size = new System.Drawing.Size(330, 90);
             this.QLK_subpanel.TabIndex = 2;
-            // 
-            // button_QLHTK
-            // 
-            this.button_QLHTK.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.button_QLHTK.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button_QLHTK.FlatAppearance.BorderSize = 0;
-            this.button_QLHTK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_QLHTK.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_QLHTK.ForeColor = System.Drawing.SystemColors.MenuBar;
-            this.button_QLHTK.Image = ((System.Drawing.Image)(resources.GetObject("button_QLHTK.Image")));
-            this.button_QLHTK.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_QLHTK.Location = new System.Drawing.Point(0, 84);
-            this.button_QLHTK.Name = "button_QLHTK";
-            this.button_QLHTK.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.button_QLHTK.Size = new System.Drawing.Size(330, 40);
-            this.button_QLHTK.TabIndex = 5;
-            this.button_QLHTK.Text = "Quản lý hàng tồn kho";
-            this.button_QLHTK.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_QLHTK.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button_QLHTK.UseVisualStyleBackColor = false;
             // 
             // QLXNK_subpanel
             // 
@@ -216,7 +191,7 @@
             this.button_QLK.ForeColor = System.Drawing.SystemColors.Menu;
             this.button_QLK.Image = ((System.Drawing.Image)(resources.GetObject("button_QLK.Image")));
             this.button_QLK.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_QLK.Location = new System.Drawing.Point(0, 543);
+            this.button_QLK.Location = new System.Drawing.Point(0, 400);
             this.button_QLK.Name = "button_QLK";
             this.button_QLK.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.button_QLK.Size = new System.Drawing.Size(330, 60);
@@ -230,34 +205,13 @@
             // QLSP_subpanel
             // 
             this.QLSP_subpanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.QLSP_subpanel.Controls.Add(this.button_subQLSP_QLTKD);
             this.QLSP_subpanel.Controls.Add(this.subQLSP_subpanel);
             this.QLSP_subpanel.Controls.Add(this.button_subQLSP_QLSP);
             this.QLSP_subpanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.QLSP_subpanel.Location = new System.Drawing.Point(0, 396);
+            this.QLSP_subpanel.Location = new System.Drawing.Point(0, 307);
             this.QLSP_subpanel.Name = "QLSP_subpanel";
-            this.QLSP_subpanel.Size = new System.Drawing.Size(330, 147);
+            this.QLSP_subpanel.Size = new System.Drawing.Size(330, 93);
             this.QLSP_subpanel.TabIndex = 2;
-            // 
-            // button_subQLSP_QLTKD
-            // 
-            this.button_subQLSP_QLTKD.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.button_subQLSP_QLTKD.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button_subQLSP_QLTKD.FlatAppearance.BorderSize = 0;
-            this.button_subQLSP_QLTKD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_subQLSP_QLTKD.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_subQLSP_QLTKD.ForeColor = System.Drawing.SystemColors.MenuBar;
-            this.button_subQLSP_QLTKD.Image = ((System.Drawing.Image)(resources.GetObject("button_subQLSP_QLTKD.Image")));
-            this.button_subQLSP_QLTKD.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_subQLSP_QLTKD.Location = new System.Drawing.Point(0, 91);
-            this.button_subQLSP_QLTKD.Name = "button_subQLSP_QLTKD";
-            this.button_subQLSP_QLTKD.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.button_subQLSP_QLTKD.Size = new System.Drawing.Size(330, 40);
-            this.button_subQLSP_QLTKD.TabIndex = 4;
-            this.button_subQLSP_QLTKD.Text = "Quản lý thuốc kê đơn";
-            this.button_subQLSP_QLTKD.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_subQLSP_QLTKD.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button_subQLSP_QLTKD.UseVisualStyleBackColor = false;
             // 
             // subQLSP_subpanel
             // 
@@ -320,7 +274,7 @@
             this.button_QLSP.ForeColor = System.Drawing.SystemColors.Menu;
             this.button_QLSP.Image = ((System.Drawing.Image)(resources.GetObject("button_QLSP.Image")));
             this.button_QLSP.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_QLSP.Location = new System.Drawing.Point(0, 336);
+            this.button_QLSP.Location = new System.Drawing.Point(0, 247);
             this.button_QLSP.Name = "button_QLSP";
             this.button_QLSP.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.button_QLSP.Size = new System.Drawing.Size(330, 60);
@@ -334,55 +288,13 @@
             // QLNV_subpanel
             // 
             this.QLNV_subpanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.QLNV_subpanel.Controls.Add(this.button_subQLNV_salary);
-            this.QLNV_subpanel.Controls.Add(this.button_subQLNV_work);
             this.QLNV_subpanel.Controls.Add(this.TTCN_subpanel);
             this.QLNV_subpanel.Controls.Add(this.button_subQLNV_TTCN);
             this.QLNV_subpanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.QLNV_subpanel.Location = new System.Drawing.Point(0, 160);
             this.QLNV_subpanel.Name = "QLNV_subpanel";
-            this.QLNV_subpanel.Size = new System.Drawing.Size(330, 176);
+            this.QLNV_subpanel.Size = new System.Drawing.Size(330, 87);
             this.QLNV_subpanel.TabIndex = 2;
-            // 
-            // button_subQLNV_salary
-            // 
-            this.button_subQLNV_salary.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.button_subQLNV_salary.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button_subQLNV_salary.FlatAppearance.BorderSize = 0;
-            this.button_subQLNV_salary.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_subQLNV_salary.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_subQLNV_salary.ForeColor = System.Drawing.SystemColors.MenuBar;
-            this.button_subQLNV_salary.Image = ((System.Drawing.Image)(resources.GetObject("button_subQLNV_salary.Image")));
-            this.button_subQLNV_salary.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.button_subQLNV_salary.Location = new System.Drawing.Point(0, 123);
-            this.button_subQLNV_salary.Name = "button_subQLNV_salary";
-            this.button_subQLNV_salary.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.button_subQLNV_salary.Size = new System.Drawing.Size(330, 40);
-            this.button_subQLNV_salary.TabIndex = 4;
-            this.button_subQLNV_salary.Text = "Lương";
-            this.button_subQLNV_salary.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_subQLNV_salary.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button_subQLNV_salary.UseVisualStyleBackColor = false;
-            // 
-            // button_subQLNV_work
-            // 
-            this.button_subQLNV_work.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.button_subQLNV_work.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button_subQLNV_work.FlatAppearance.BorderSize = 0;
-            this.button_subQLNV_work.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_subQLNV_work.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_subQLNV_work.ForeColor = System.Drawing.SystemColors.MenuBar;
-            this.button_subQLNV_work.Image = ((System.Drawing.Image)(resources.GetObject("button_subQLNV_work.Image")));
-            this.button_subQLNV_work.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.button_subQLNV_work.Location = new System.Drawing.Point(0, 83);
-            this.button_subQLNV_work.Name = "button_subQLNV_work";
-            this.button_subQLNV_work.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.button_subQLNV_work.Size = new System.Drawing.Size(330, 40);
-            this.button_subQLNV_work.TabIndex = 3;
-            this.button_subQLNV_work.Text = "Công việc";
-            this.button_subQLNV_work.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_subQLNV_work.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button_subQLNV_work.UseVisualStyleBackColor = false;
             // 
             // TTCN_subpanel
             // 
@@ -591,20 +503,16 @@
         private System.Windows.Forms.Button button_subQLNV_TTCN;
         private System.Windows.Forms.Panel TTCN_subpanel;
         private System.Windows.Forms.Button button_subTTCN_show;
-        private System.Windows.Forms.Button button_subQLNV_work;
-        private System.Windows.Forms.Button button_subQLNV_salary;
         private System.Windows.Forms.Button button_QLSP;
         private System.Windows.Forms.Panel QLSP_subpanel;
         private System.Windows.Forms.Button button_subQLSP_QLSP;
         private System.Windows.Forms.Panel subQLSP_subpanel;
         private System.Windows.Forms.Button button_subQLSPsub_show;
-        private System.Windows.Forms.Button button_subQLSP_QLTKD;
         private System.Windows.Forms.Button button_QLK;
         private System.Windows.Forms.Panel QLK_subpanel;
         private System.Windows.Forms.Button button_subQLK_QLXNK;
         private System.Windows.Forms.Panel QLXNK_subpanel;
         private System.Windows.Forms.Button button_subQLXNK_show;
-        private System.Windows.Forms.Button button_QLHTK;
         private System.Windows.Forms.Button button_taotaikhoan;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label1;

@@ -182,15 +182,6 @@
         rkJggg==
 </value>
   </data>
-  <data name="button_QLHTK.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABQAAAAZCAYAAAAxFw7TAAAABGdBTUEAALGPC/xhBQAAALRJREFUSEvl
-        0bEJwkAYhuGQQkhha2WhCKYXR7DNBg5gZZMulcu4hgs4hg7gBifvgYGA/93/hWBj8Tb3wQN3V2xWdZiy
-        34LLXRP7tlmZIFDZPWIKaoLV6RaKyyumoCa43u7D7HyX0eQbjkGTIKloFiQFdYHkRd0geVAJJNCyew5Q
-        zj67DM6P1x6jxaEd7BKYw8gNejBygV6MsqCCURJUMTLBMRiZIICKUfLKQApG2U9R+zuwDm9jqgTXg0Ks
-        ZwAAAABJRU5ErkJggg==
-</value>
-  </data>
   <data name="button_subQLK_QLXNK.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABQAAAAZCAYAAAAxFw7TAAAABGdBTUEAALGPC/xhBQAAALRJREFUSEvl
@@ -325,24 +316,6 @@
         Zmo5MoWHyPZo79NKisBW7n9inj1JisYnSCYfaUVa/5cljJ/iFJcr49dpCe/P0mp+llDek41feqZXJFb/
         G9ivUjT+viRU1nae2LeeiefAXPHYLUl+mSHlFeIJLeOvSNH4B2X6r4IaS40D1jJP/k4/+6tSND5NUjQ+
         TVI0PiV6hv8AC+BvN1QoBFwAAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="button_subQLSP_QLSL.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABQAAAAZCAYAAAAxFw7TAAAABGdBTUEAALGPC/xhBQAAALRJREFUSEvl
-        0bEJwkAYhuGQQkhha2WhCKYXR7DNBg5gZZMulcu4hgs4hg7gBifvgYGA/93/hWBj8Tb3wQN3V2xWdZiy
-        34LLXRP7tlmZIFDZPWIKaoLV6RaKyyumoCa43u7D7HyX0eQbjkGTIKloFiQFdYHkRd0geVAJJNCyew5Q
-        zj67DM6P1x6jxaEd7BKYw8gNejBygV6MsqCCURJUMTLBMRiZIICKUfLKQApG2U9R+zuwDm9jqgTXg0Ks
-        ZwAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="button_subQLSP_work.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABQAAAAZCAYAAAAxFw7TAAAABGdBTUEAALGPC/xhBQAAALRJREFUSEvl
-        0bEJwkAYhuGQQkhha2WhCKYXR7DNBg5gZZMulcu4hgs4hg7gBifvgYGA/93/hWBj8Tb3wQN3V2xWdZiy
-        34LLXRP7tlmZIFDZPWIKaoLV6RaKyyumoCa43u7D7HyX0eQbjkGTIKloFiQFdYHkRd0geVAJJNCyew5Q
-        zj67DM6P1x6jxaEd7BKYw8gNejBygV6MsqCCURJUMTLBMRiZIICKUfLKQApG2U9R+zuwDm9jqgTXg0Ks
-        ZwAAAABJRU5ErkJggg==
 </value>
   </data>
   <data name="button_subQLSP_QLSP.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
