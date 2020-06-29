@@ -39,21 +39,38 @@ namespace UIDesign
 
         private void Button_ok_Click(object sender, EventArgs e)
         {
+            SE_07 db = new SE_07();
+            int count = 0;
             try
             {
                 string role = textBox_userrole.Text;
                 string user = textBox_username.Text;
                 string pass = textBox_pass.Text;
-                TaiKhoan tk = new TaiKhoan
+                foreach (TaiKhoan i in db.TaiKhoans)
                 {
-                    nvID = ((CBBItems)combobox_namenv.SelectedItem).Value,
-                    UserName = user,
-                    Pass = pass,
-                    Type = role
-                };
-                BLL_NhanVien.Instance.AddTaiKhoan_Bll(tk);
-                MessageBox.Show("Tạo tài khoản thành công");
-                this.Dispose();
+                    if (user == i.UserName)
+                    {
+                        {
+                            MessageBox.Show("Tên đăng nhập đã tồn tại!");
+                        }
+                    }
+                    else {
+                        count += 1;
+                        if (count == db.TaiKhoans.Count())
+                        {
+                            TaiKhoan tk = new TaiKhoan
+                            {
+                                nvID = ((CBBItems)combobox_namenv.SelectedItem).Value,
+                                UserName = user,
+                                Pass = pass,
+                                Type = role
+                            };
+                            BLL_NhanVien.Instance.AddTaiKhoan_Bll(tk);
+                            MessageBox.Show("Tạo tài khoản thành công");
+                            this.Dispose();
+                        }
+                    }
+                }
             }
             catch (Exception ex)
             {

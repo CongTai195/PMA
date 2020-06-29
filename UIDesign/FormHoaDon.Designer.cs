@@ -45,7 +45,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.textBox_soluong = new System.Windows.Forms.TextBox();
             this.label_thanhtien = new System.Windows.Forms.Label();
             this.textBox_thanhtien = new System.Windows.Forms.TextBox();
             this.panel8 = new System.Windows.Forms.Panel();
@@ -70,7 +69,9 @@
             this.button_subQLBH_del = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
+            this.numericUpDown_soluong = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_soluong)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -95,6 +96,7 @@
             // 
             // dateTimePicker1
             // 
+            this.dateTimePicker1.Enabled = false;
             this.dateTimePicker1.Location = new System.Drawing.Point(115, 171);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(257, 22);
@@ -229,17 +231,6 @@
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(353, 1);
             this.panel7.TabIndex = 14;
-            // 
-            // textBox_soluong
-            // 
-            this.textBox_soluong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
-            this.textBox_soluong.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox_soluong.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_soluong.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.textBox_soluong.Location = new System.Drawing.Point(160, 490);
-            this.textBox_soluong.Name = "textBox_soluong";
-            this.textBox_soluong.Size = new System.Drawing.Size(197, 22);
-            this.textBox_soluong.TabIndex = 10;
             // 
             // label_thanhtien
             // 
@@ -486,6 +477,7 @@
             this.button_subQLBH_del.TabIndex = 58;
             this.button_subQLBH_del.Text = "Xóa khỏi hóa đơn";
             this.button_subQLBH_del.UseVisualStyleBackColor = true;
+            this.button_subQLBH_del.Click += new System.EventHandler(this.Button_subQLBH_del_Click);
             // 
             // dataGridView1
             // 
@@ -510,12 +502,23 @@
             this.label3.Text = "Sản phẩm khách mua";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // numericUpDown_soluong
+            // 
+            this.numericUpDown_soluong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
+            this.numericUpDown_soluong.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDown_soluong.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.numericUpDown_soluong.Location = new System.Drawing.Point(313, 485);
+            this.numericUpDown_soluong.Name = "numericUpDown_soluong";
+            this.numericUpDown_soluong.Size = new System.Drawing.Size(59, 28);
+            this.numericUpDown_soluong.TabIndex = 61;
+            // 
             // FormHoaDon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
             this.ClientSize = new System.Drawing.Size(870, 955);
+            this.Controls.Add(this.numericUpDown_soluong);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button_subQLBH_del);
@@ -545,7 +548,6 @@
             this.Controls.Add(this.label_dongia);
             this.Controls.Add(this.textBox_nameKH);
             this.Controls.Add(this.textBox_phoneKH);
-            this.Controls.Add(this.textBox_soluong);
             this.Controls.Add(this.textBox_ageKH);
             this.Controls.Add(this.label_namekh);
             this.Controls.Add(this.textBox_DVT);
@@ -561,6 +563,7 @@
             this.Name = "FormHoaDon";
             this.Text = "Form6";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_soluong)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -583,7 +586,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.TextBox textBox_soluong;
         private System.Windows.Forms.Label label_thanhtien;
         private System.Windows.Forms.TextBox textBox_thanhtien;
         private System.Windows.Forms.Panel panel8;
@@ -608,5 +610,6 @@
         private System.Windows.Forms.Button button_subQLBH_del;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.NumericUpDown numericUpDown_soluong;
     }
 }

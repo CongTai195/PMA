@@ -102,11 +102,11 @@ namespace UIDesign
             int thanhtien = 0;
             DB.Rows.Add(new object[] {
                 ((CBBItems)comboBox_sanpham.SelectedItem).Value,comboBox_sanpham.SelectedItem.ToString(), textBox_DVT.Text,
-                Convert.ToInt32(textBox_soluong.Text),textBox_dongia.Text
+                Convert.ToInt32(numericUpDown_soluong.Value),textBox_dongia.Text
             });
             comboBox_sanpham.SelectedIndex = 0;
             textBox_DVT.Clear();
-            textBox_soluong.Clear();
+            numericUpDown_soluong.Value = 0;
             textBox_dongia.Clear();
             foreach (DataGridViewRow i in dataGridView1.Rows)
             {
@@ -117,7 +117,7 @@ namespace UIDesign
 
         private void Button_subQLBH_ok_Click(object sender, EventArgs e)
         {
-            
+            try
             {
                 SE_07 db = new SE_07();
                 Bill bill = new Bill
@@ -143,10 +143,33 @@ namespace UIDesign
                     BLL_Bill.Instance.BLL_AddDeatialBill(dtbill);
                 }
             }
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show(ex.Message);
-            //}
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void Button_subQLBH_del_Click(object sender, EventArgs e)
+        {
+            DataGridViewSelectedRowCollection r = dataGridView1.SelectedRows;
+            SE_07 db = new SE_07();
+            List<int> now = new List<int>();
+            foreach (DataGridViewRow i in r)
+            {
+                if (i.Cells["spID"].Value.ToString() != null)
+                    now.Add(Convert.ToInt32(i.Cells["spID"].Value.ToString()));
+            }
+            foreach (int j in now)
+            {
+                foreach (DataRow i in DB.Select())
+                {
+                    if (Convert.ToInt32(i["spID"].ToString()) == j)
+                    {
+                        DB.Rows.Remove(i);
+                    }
+                }
+                DB.AcceptChanges();
+            }
         }
     }
 }
