@@ -65,5 +65,31 @@ namespace UIDesign.BLL
             }
             return b;
         }
+        public void BLL_Add(Bill bill)
+        {
+            SE_07 db = new SE_07();
+            try
+            {
+                db.Bills.Add(bill);
+                db.SaveChanges();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+        }
+        public void BLL_AddDeatialBill(DetailBill dtbill)
+        {
+            SE_07 db = new SE_07();
+            try
+            {
+                db.DetailBills.Add(dtbill);
+                db.SaveChanges();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+        }
     }
 }

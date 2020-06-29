@@ -108,7 +108,7 @@
             this.button_taotaikhoan.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_taotaikhoan.ForeColor = System.Drawing.SystemColors.Menu;
             this.button_taotaikhoan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_taotaikhoan.Location = new System.Drawing.Point(0, 550);
+            this.button_taotaikhoan.Location = new System.Drawing.Point(0, 538);
             this.button_taotaikhoan.Name = "button_taotaikhoan";
             this.button_taotaikhoan.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.button_taotaikhoan.Size = new System.Drawing.Size(330, 60);
@@ -125,9 +125,9 @@
             this.QLK_subpanel.Controls.Add(this.QLXNK_subpanel);
             this.QLK_subpanel.Controls.Add(this.button_subQLK_QLXNK);
             this.QLK_subpanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.QLK_subpanel.Location = new System.Drawing.Point(0, 460);
+            this.QLK_subpanel.Location = new System.Drawing.Point(0, 454);
             this.QLK_subpanel.Name = "QLK_subpanel";
-            this.QLK_subpanel.Size = new System.Drawing.Size(330, 90);
+            this.QLK_subpanel.Size = new System.Drawing.Size(330, 84);
             this.QLK_subpanel.TabIndex = 2;
             // 
             // QLXNK_subpanel
@@ -191,7 +191,7 @@
             this.button_QLK.ForeColor = System.Drawing.SystemColors.Menu;
             this.button_QLK.Image = ((System.Drawing.Image)(resources.GetObject("button_QLK.Image")));
             this.button_QLK.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_QLK.Location = new System.Drawing.Point(0, 400);
+            this.button_QLK.Location = new System.Drawing.Point(0, 394);
             this.button_QLK.Name = "button_QLK";
             this.button_QLK.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.button_QLK.Size = new System.Drawing.Size(330, 60);
@@ -210,7 +210,7 @@
             this.QLSP_subpanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.QLSP_subpanel.Location = new System.Drawing.Point(0, 307);
             this.QLSP_subpanel.Name = "QLSP_subpanel";
-            this.QLSP_subpanel.Size = new System.Drawing.Size(330, 93);
+            this.QLSP_subpanel.Size = new System.Drawing.Size(330, 87);
             this.QLSP_subpanel.TabIndex = 2;
             // 
             // subQLSP_subpanel

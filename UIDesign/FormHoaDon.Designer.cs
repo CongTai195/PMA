@@ -47,7 +47,7 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.textBox_soluong = new System.Windows.Forms.TextBox();
             this.label_thanhtien = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox_thanhtien = new System.Windows.Forms.TextBox();
             this.panel8 = new System.Windows.Forms.Panel();
             this.button_subQLKH_add = new System.Windows.Forms.Button();
             this.label_ageKH = new System.Windows.Forms.Label();
@@ -179,6 +179,7 @@
             this.textBox_DVT.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.textBox_DVT.Location = new System.Drawing.Point(160, 402);
             this.textBox_DVT.Name = "textBox_DVT";
+            this.textBox_DVT.ReadOnly = true;
             this.textBox_DVT.Size = new System.Drawing.Size(197, 22);
             this.textBox_DVT.TabIndex = 10;
             // 
@@ -201,6 +202,7 @@
             this.textBox_dongia.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.textBox_dongia.Location = new System.Drawing.Point(160, 567);
             this.textBox_dongia.Name = "textBox_dongia";
+            this.textBox_dongia.ReadOnly = true;
             this.textBox_dongia.Size = new System.Drawing.Size(197, 22);
             this.textBox_dongia.TabIndex = 9;
             // 
@@ -250,17 +252,17 @@
             this.label_thanhtien.Text = "Thành tiền";
             this.label_thanhtien.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox4
+            // textBox_thanhtien
             // 
-            this.textBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox4.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.textBox4.Location = new System.Drawing.Point(160, 662);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(197, 22);
-            this.textBox4.TabIndex = 9;
+            this.textBox_thanhtien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
+            this.textBox_thanhtien.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox_thanhtien.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_thanhtien.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.textBox_thanhtien.Location = new System.Drawing.Point(160, 662);
+            this.textBox_thanhtien.Name = "textBox_thanhtien";
+            this.textBox_thanhtien.ReadOnly = true;
+            this.textBox_thanhtien.Size = new System.Drawing.Size(197, 22);
+            this.textBox_thanhtien.TabIndex = 9;
             // 
             // panel8
             // 
@@ -384,6 +386,7 @@
             this.button_subQLBH_add.TabIndex = 15;
             this.button_subQLBH_add.Text = "Thêm vào hóa đơn";
             this.button_subQLBH_add.UseVisualStyleBackColor = true;
+            this.button_subQLBH_add.Click += new System.EventHandler(this.Button_subQLBH_add_Click);
             // 
             // comboBox_nhanvien
             // 
@@ -423,6 +426,7 @@
             this.button_subQLBH_ok.TabIndex = 53;
             this.button_subQLBH_ok.Text = "Xác nhận";
             this.button_subQLBH_ok.UseVisualStyleBackColor = true;
+            this.button_subQLBH_ok.Click += new System.EventHandler(this.Button_subQLBH_ok_Click);
             // 
             // button_back
             // 
@@ -485,6 +489,7 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(423, 430);
@@ -534,7 +539,7 @@
             this.Controls.Add(this.panel9);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.textBox_thanhtien);
             this.Controls.Add(this.label_thanhtien);
             this.Controls.Add(this.textBox_dongia);
             this.Controls.Add(this.label_dongia);
@@ -580,7 +585,7 @@
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.TextBox textBox_soluong;
         private System.Windows.Forms.Label label_thanhtien;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBox_thanhtien;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Button button_subQLKH_add;
         private System.Windows.Forms.Label label_ageKH;
