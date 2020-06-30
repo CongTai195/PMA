@@ -71,46 +71,46 @@
     <Compile Include="DetailBill.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="View\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
+    <Compile Include="View\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form2.cs">
+    <Compile Include="View\Form2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form2.Designer.cs">
+    <Compile Include="View\Form2.Designer.cs">
       <DependentUpon>Form2.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form3.cs">
+    <Compile Include="View\Form3.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form3.Designer.cs">
+    <Compile Include="View\Form3.Designer.cs">
       <DependentUpon>Form3.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormDonHang.cs">
+    <Compile Include="View\FormDonHang.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormDonHang.Designer.cs">
+    <Compile Include="View\FormDonHang.Designer.cs">
       <DependentUpon>FormDonHang.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormKhachHang.cs">
+    <Compile Include="View\FormKhachHang.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormKhachHang.Designer.cs">
+    <Compile Include="View\FormKhachHang.Designer.cs">
       <DependentUpon>FormKhachHang.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormKho.cs">
+    <Compile Include="View\FormKho.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormKho.Designer.cs">
+    <Compile Include="View\FormKho.Designer.cs">
       <DependentUpon>FormKho.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormNhanVien.cs">
+    <Compile Include="View\FormNhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormNhanVien.Designer.cs">
+    <Compile Include="View\FormNhanVien.Designer.cs">
       <DependentUpon>FormNhanVien.cs</DependentUpon>
     </Compile>
     <Compile Include="HoatDong.cs">
@@ -146,87 +146,87 @@
     <Compile Include="SanPham.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="SubFormKhachHang.cs">
+    <Compile Include="View\SubFormKhachHang.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SubFormKhachHang.Designer.cs">
+    <Compile Include="View\SubFormKhachHang.Designer.cs">
       <DependentUpon>SubFormKhachHang.cs</DependentUpon>
     </Compile>
-    <Compile Include="SubFormKho.cs">
+    <Compile Include="View\SubFormKho.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SubFormKho.Designer.cs">
+    <Compile Include="View\SubFormKho.Designer.cs">
       <DependentUpon>SubFormKho.cs</DependentUpon>
     </Compile>
-    <Compile Include="SubFormNhanVien.cs">
+    <Compile Include="View\SubFormNhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SubFormNhanVien.Designer.cs">
+    <Compile Include="View\SubFormNhanVien.Designer.cs">
       <DependentUpon>SubFormNhanVien.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormHoaDon.cs">
+    <Compile Include="View\FormHoaDon.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormHoaDon.Designer.cs">
+    <Compile Include="View\FormHoaDon.Designer.cs">
       <DependentUpon>FormHoaDon.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormSanPham.cs">
+    <Compile Include="View\FormSanPham.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormSanPham.Designer.cs">
+    <Compile Include="View\FormSanPham.Designer.cs">
       <DependentUpon>FormSanPham.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SubFormSanPham.cs">
+    <Compile Include="View\SubFormSanPham.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SubFormSanPham.Designer.cs">
+    <Compile Include="View\SubFormSanPham.Designer.cs">
       <DependentUpon>SubFormSanPham.cs</DependentUpon>
     </Compile>
-    <Compile Include="SubFormTaiKhoan.cs">
+    <Compile Include="View\SubFormTaiKhoan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SubFormTaiKhoan.Designer.cs">
+    <Compile Include="View\SubFormTaiKhoan.Designer.cs">
       <DependentUpon>SubFormTaiKhoan.cs</DependentUpon>
     </Compile>
     <Compile Include="TaiKhoan.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Form1.resx">
+    <EmbeddedResource Include="View\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form2.resx">
+    <EmbeddedResource Include="View\Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form3.resx">
+    <EmbeddedResource Include="View\Form3.resx">
       <DependentUpon>Form3.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormDonHang.resx">
+    <EmbeddedResource Include="View\FormDonHang.resx">
       <DependentUpon>FormDonHang.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormKhachHang.resx">
+    <EmbeddedResource Include="View\FormKhachHang.resx">
       <DependentUpon>FormKhachHang.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormKho.resx">
+    <EmbeddedResource Include="View\FormKho.resx">
       <DependentUpon>FormKho.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormNhanVien.resx">
+    <EmbeddedResource Include="View\FormNhanVien.resx">
       <DependentUpon>FormNhanVien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SubFormKhachHang.resx">
+    <EmbeddedResource Include="View\SubFormKhachHang.resx">
       <DependentUpon>SubFormKhachHang.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SubFormKho.resx">
+    <EmbeddedResource Include="View\SubFormKho.resx">
       <DependentUpon>SubFormKho.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SubFormNhanVien.resx">
+    <EmbeddedResource Include="View\SubFormNhanVien.resx">
       <DependentUpon>SubFormNhanVien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormHoaDon.resx">
+    <EmbeddedResource Include="View\FormHoaDon.resx">
       <DependentUpon>FormHoaDon.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormSanPham.resx">
+    <EmbeddedResource Include="View\FormSanPham.resx">
       <DependentUpon>FormSanPham.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -238,10 +238,10 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="SubFormSanPham.resx">
+    <EmbeddedResource Include="View\SubFormSanPham.resx">
       <DependentUpon>SubFormSanPham.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SubFormTaiKhoan.resx">
+    <EmbeddedResource Include="View\SubFormTaiKhoan.resx">
       <DependentUpon>SubFormTaiKhoan.cs</DependentUpon>
     </EmbeddedResource>
     <EntityDeploy Include="Model1.edmx">
@@ -280,5 +280,6 @@
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

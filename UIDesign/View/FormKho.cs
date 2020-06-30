@@ -161,7 +161,7 @@ namespace UIDesign
                     now.Add(Convert.ToInt32(i.Cells["kID"].Value.ToString()));
             }
             List<Kho> k = BLL_Kho.Instance.Sort_Bll(now);
-            dataGridView1.DataSource = k.Select(p => new { p.kID, p.HoatDong.hdName, p.SanPham.spName, p.DVT, p.Quantity, p.MFG, p.EXP, p.Date }).ToList();
+            dataGridView1.DataSource = k.Select(p => new { p.kID, p.HoatDong.hdName, p.SanPham.spName, p.DVT, p.Quantity, p.MFG, p.EXP, p.Date }).OrderBy(p => p.spName).ToList();
 
         }
 

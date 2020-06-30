@@ -138,7 +138,7 @@ namespace UIDesign
                     now.Add(Convert.ToInt32(i.Cells["spID"].Value.ToString()));
             }
             List<SanPham> sp = BLL_SanPham.Instance.Sort_Bll(now);
-            dataGridView1.DataSource = sp.Select(p => new { p.spID, p.spName, p.LoaiSanPham.TypeName, p.Unit, p.Price }).ToList();
+            dataGridView1.DataSource = sp.Select(p => new { p.spID, p.spName, p.LoaiSanPham.TypeName, p.Unit, p.Price }).OrderBy(p => p.spName).ToList();
         }
 
         private void Button_back_Click(object sender, EventArgs e)

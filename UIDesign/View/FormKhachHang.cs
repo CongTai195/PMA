@@ -88,7 +88,7 @@ namespace UIDesign
                     now.Add(Convert.ToInt32(i.Cells["khID"].Value.ToString()));
             }
             List<KhachHang> kh = BLL_KhachHang.Instance.Sort_Bll(now);
-            dataGridView1.DataSource = kh.Select(p => new { p.khID, p.khName, p.Age, p.khPhone }).ToList();
+            dataGridView1.DataSource = kh.Select(p => new { p.khID, p.khName, p.Age, p.khPhone }).OrderBy(p => p.khName).ToList();
         }
 
         private void DataGridView1_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)

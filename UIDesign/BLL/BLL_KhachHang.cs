@@ -9,7 +9,7 @@ namespace UIDesign.BLL
 {
     class BLL_KhachHang
     {
-        public delegate bool Compare(object o1, object o2);
+        //public delegate bool Compare(object o1, object o2);
         private static BLL_KhachHang _Instance;
 
         public static BLL_KhachHang Instance
@@ -104,7 +104,7 @@ namespace UIDesign.BLL
                         }
                     }
                 }
-                Sort(k, KhachHang.Compare_TenKhachHang);
+                //Sort(k, KhachHang.Compare_TenKhachHang);
             }
             catch (Exception e)
             {
@@ -112,20 +112,20 @@ namespace UIDesign.BLL
             }
             return k;
         }
-        public static void Sort(List<KhachHang> a, Compare cmp)
-        {
-            for (int i = 0; i <= a.Count - 1; i++)
-            {
-                for (int j = i + 1; j < a.Count; j++)
-                {
-                    if (cmp(a[i].khName, a[j].khName))
-                    {
-                        KhachHang t = a[i];
-                        a[i] = a[j];
-                        a[j] = t;
-                    }
-                }
-            }
-        }
+        //public static void Sort(List<KhachHang> a, Compare cmp)
+        //{
+        //    for (int i = 0; i <= a.Count - 1; i++)
+        //    {
+        //        for (int j = i + 1; j < a.Count; j++)
+        //        {
+        //            if (cmp(a[i].khName, a[j].khName))
+        //            {
+        //                KhachHang t = a[i];
+        //                a[i] = a[j];
+        //                a[j] = t;
+        //            }
+        //        }
+        //    }
+        //}
     }
 }

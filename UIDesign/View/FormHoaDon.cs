@@ -60,6 +60,7 @@ namespace UIDesign
 
         private void Button_subQLKH_add_Click(object sender, EventArgs e)
         {
+            SE_07 db = new SE_07();
             string nameKH = textBox_nameKH.Text;
             int ageKH = Convert.ToInt32(textBox_ageKH.Text);
             string phoneKH = textBox_phoneKH.Text;
@@ -74,6 +75,15 @@ namespace UIDesign
             textBox_ageKH.Clear();
             textBox_phoneKH.Clear();
             textBox_nameKH.Clear();
+            if (comboBox_khachhang.Items != null) comboBox_khachhang.Items.Clear();
+            foreach (KhachHang i in db.KhachHangs)
+            {
+                comboBox_khachhang.Items.Add(new CBBItems
+                {
+                    Value = i.khID,
+                    Text = i.khName
+                });
+            }
         }
 
         private void ComboBox_sanpham_SelectedIndexChanged(object sender, EventArgs e)

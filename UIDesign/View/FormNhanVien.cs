@@ -92,7 +92,7 @@ namespace UIDesign
                     now.Add(Convert.ToInt32(i.Cells["nvID"].Value.ToString()));
             }
             List<NhanVien> nv = BLL_NhanVien.Instance.Sort_Bll(now);
-            dataGridView1.DataSource = nv.Select(p => new { p.nvID, p.nvName, p.nvIDNumber, p.nvPhone, p.nvDOB, p.Salary, p.nvAddress }).ToList();
+            dataGridView1.DataSource = nv.Select(p => new { p.nvID, p.nvName, p.nvIDNumber, p.nvPhone, p.nvDOB, p.Salary, p.nvAddress }).OrderBy(p => p.nvName).ToList();
         }
 
         private void DataGridView1_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)

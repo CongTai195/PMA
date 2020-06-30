@@ -32,10 +32,5 @@ namespace UIDesign
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Kho> Khoes { get; set; }
         public virtual LoaiSanPham LoaiSanPham { get; set; }
-        public static bool Compare_TenSanPham(object o1, object o2)
-        {
-            if (string.Compare(o1.ToString(), o2.ToString()) > 0) return true;
-            else return false;
-        }
     }
 }

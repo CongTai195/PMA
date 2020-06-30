@@ -9,7 +9,7 @@ namespace UIDesign.BLL
 {
     class BLL_NhanVien
     {
-        public delegate bool Compare(object o1, object o2);
+        //public delegate bool Compare(object o1, object o2);
         private static BLL_NhanVien _Instance;
 
         public static BLL_NhanVien Instance
@@ -119,7 +119,7 @@ namespace UIDesign.BLL
                         }
                     }
                 }
-                Sort(nv, NhanVien.Compare_TenNhanVien);
+                //Sort(nv, NhanVien.Compare_TenNhanVien);
             }
             catch (Exception e)
             {
@@ -127,20 +127,20 @@ namespace UIDesign.BLL
             }
             return nv;
         }
-        public static void Sort(List<NhanVien> a, Compare cmp)
-        {
-            for (int i = 0; i <= a.Count - 1; i++)
-            {
-                for (int j = i + 1; j < a.Count; j++)
-                {
-                    if (cmp(a[i].nvName, a[j].nvName))
-                    {
-                        NhanVien t = a[i];
-                        a[i] = a[j];
-                        a[j] = t;
-                    }
-                }
-            }
-        }
+        //public static void Sort(List<NhanVien> a, Compare cmp)
+        //{
+        //    for (int i = 0; i <= a.Count - 1; i++)
+        //    {
+        //        for (int j = i + 1; j < a.Count; j++)
+        //        {
+        //            if (cmp(a[i].nvName, a[j].nvName))
+        //            {
+        //                NhanVien t = a[i];
+        //                a[i] = a[j];
+        //                a[j] = t;
+        //            }
+        //        }
+        //    }
+        //}
     }
 }

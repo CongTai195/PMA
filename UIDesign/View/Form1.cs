@@ -46,6 +46,8 @@ namespace UIDesign
             string user = textBox1.Text;
             string pass = textBox2.Text;
             BLL_Login.Instance.LogIn(user, pass);
+            textBox1.Text = "Username";
+            textBox2.Text = "Password";
         }
 
         private void Form1_KeyPress(object sender, KeyPressEventArgs e)
@@ -55,6 +57,8 @@ namespace UIDesign
                 string user = textBox1.Text;
                 string pass = textBox2.Text;
                 BLL_Login.Instance.LogIn(user, pass);
+                textBox1.Text = "Username";
+                textBox2.Text = "Password";
             }
         }
     }

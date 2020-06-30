@@ -9,7 +9,7 @@ namespace UIDesign.BLL
 {
     class BLL_Kho
     {
-        public delegate bool Compare(object o1, object o2);
+        //public delegate bool Compare(object o1, object o2);
         private static BLL_Kho _Instance;
 
         public static BLL_Kho Instance
@@ -113,7 +113,7 @@ namespace UIDesign.BLL
                         }
                     }
                 }
-                Sort(k, Kho.Compare_TenSanPham);
+                //Sort(k, Kho.Compare_TenSanPham);
             }
             catch (Exception e)
             {
@@ -121,20 +121,20 @@ namespace UIDesign.BLL
             }
             return k;
         }
-        public static void Sort(List<Kho> a, Compare cmp)
-        {
-            for (int i = 0; i <= a.Count - 1; i++)
-            {
-                for (int j = i + 1; j < a.Count; j++)
-                {
-                    if (cmp(a[i].SanPham.spName, a[j].SanPham.spName))
-                    {
-                        Kho t = a[i];
-                        a[i] = a[j];
-                        a[j] = t;
-                    }
-                }
-            }
-        }
+        //public static void Sort(List<Kho> a, Compare cmp)
+        //{
+        //    for (int i = 0; i <= a.Count - 1; i++)
+        //    {
+        //        for (int j = i + 1; j < a.Count; j++)
+        //        {
+        //            if (cmp(a[i].SanPham.spName, a[j].SanPham.spName))
+        //            {
+        //                Kho t = a[i];
+        //                a[i] = a[j];
+        //                a[j] = t;
+        //            }
+        //        }
+        //    }
+        //}
     }
 }

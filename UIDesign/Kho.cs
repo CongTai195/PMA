@@ -25,10 +25,5 @@ namespace UIDesign
     
         public virtual HoatDong HoatDong { get; set; }
         public virtual SanPham SanPham { get; set; }
-        public static bool Compare_TenSanPham(object o1, object o2)
-        {
-            if (string.Compare(o1.ToString(), o2.ToString()) > 0) return true;
-            else return false;
-        }
     }
 }
