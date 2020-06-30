@@ -60,30 +60,55 @@ namespace UIDesign
 
         private void Button_subQLKH_add_Click(object sender, EventArgs e)
         {
+            int count = 0;
             SE_07 db = new SE_07();
-            string nameKH = textBox_nameKH.Text;
-            int ageKH = Convert.ToInt32(textBox_ageKH.Text);
-            string phoneKH = textBox_phoneKH.Text;
-            KhachHang kh = new KhachHang
+            try
             {
-                khName = nameKH,
-                Age = ageKH,
-                khPhone = phoneKH
-            };
-            BLL_KhachHang.Instance.BLL_Add(kh);
-            MessageBox.Show("Thêm thành công");
-            textBox_ageKH.Clear();
-            textBox_phoneKH.Clear();
-            textBox_nameKH.Clear();
-            if (comboBox_khachhang.Items != null) comboBox_khachhang.Items.Clear();
-            foreach (KhachHang i in db.KhachHangs)
-            {
-                comboBox_khachhang.Items.Add(new CBBItems
+                string nameKH = textBox_nameKH.Text;
+                int ageKH = Convert.ToInt32(textBox_ageKH.Text);
+                string phoneKH = textBox_phoneKH.Text;
+                foreach (KhachHang i in db.KhachHangs)
                 {
-                    Value = i.khID,
-                    Text = i.khName
-                });
+                    if (phoneKH == i.khPhone)
+                    {
+                        {
+                            MessageBox.Show("Số điện thoại không hợp lệ!");
+                        }
+                    }
+                    else
+                    {
+                        count += 1;
+                        if (count == db.KhachHangs.Count())
+                        {
+                            KhachHang kh = new KhachHang
+                            {
+                                khName = nameKH,
+                                Age = ageKH,
+                                khPhone = phoneKH
+                            };
+                            BLL_KhachHang.Instance.BLL_Add(kh);
+                            MessageBox.Show("Thêm thành công");
+                            textBox_ageKH.Clear();
+                            textBox_phoneKH.Clear();
+                            textBox_nameKH.Clear();
+                            if (comboBox_khachhang.Items != null) comboBox_khachhang.Items.Clear();
+                            foreach (KhachHang j in db.KhachHangs)
+                            {
+                                comboBox_khachhang.Items.Add(new CBBItems
+                                {
+                                    Value = j.khID,
+                                    Text = j.khName
+                                });
+                            }
+                        }
+                    }
+                }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
         }
 
         private void ComboBox_sanpham_SelectedIndexChanged(object sender, EventArgs e)
@@ -109,20 +134,63 @@ namespace UIDesign
 
         private void Button_subQLBH_add_Click(object sender, EventArgs e)
         {
-            int thanhtien = 0;
-            DB.Rows.Add(new object[] {
-                ((CBBItems)comboBox_sanpham.SelectedItem).Value,comboBox_sanpham.SelectedItem.ToString(), textBox_DVT.Text,
-                Convert.ToInt32(numericUpDown_soluong.Value),textBox_dongia.Text
-            });
-            comboBox_sanpham.SelectedIndex = 0;
-            textBox_DVT.Clear();
-            numericUpDown_soluong.Value = 0;
-            textBox_dongia.Clear();
-            foreach (DataGridViewRow i in dataGridView1.Rows)
+            try
             {
-                thanhtien += Convert.ToInt32(i.Cells["Quantity"].Value) * Convert.ToInt32(i.Cells["Price"].Value);
+                int thanhtien = 0;
+                int check = 0;
+                int quantity;
+                if (Convert.ToInt32(numericUpDown_soluong.Value) == 0)
+                {
+                    MessageBox.Show("Bạn chưa chọn số sản phẩm cần mua!");
+
+                }
+                else
+                {
+                    if (dataGridView1.Rows.Count == 0)
+                    {
+                        DB.Rows.Add(new object[] {
+                                ((CBBItems)comboBox_sanpham.SelectedItem).Value,comboBox_sanpham.SelectedItem.ToString(), textBox_DVT.Text,
+                                    Convert.ToInt32(numericUpDown_soluong.Value),textBox_dongia.Text
+                            });
+                    }
+                    else if (dataGridView1.Rows.Count > 0)
+                    {
+                        foreach (DataGridViewRow i in dataGridView1.Rows)
+                        {
+                            if (((CBBItems)comboBox_sanpham.SelectedItem).Value == Convert.ToInt32(i.Cells["spID"].Value))
+                            {
+                                quantity = Convert.ToInt32(i.Cells["Quantity"].Value);
+                                quantity += Convert.ToInt32(numericUpDown_soluong.Value);
+                                i.Cells["Quantity"].Value = quantity;
+                            }
+                            else
+                            {
+                                check += 1;
+                                if (check == dataGridView1.Rows.Count)
+                                {
+                                    DB.Rows.Add(new object[] {
+                                ((CBBItems)comboBox_sanpham.SelectedItem).Value,comboBox_sanpham.SelectedItem.ToString(), textBox_DVT.Text,
+                                    Convert.ToInt32(numericUpDown_soluong.Value),textBox_dongia.Text
+                            });
+                                    break;
+                                }
+                            }
+                        }
+                    }
+                    textBox_DVT.Clear();
+                    numericUpDown_soluong.Value = 0;
+                    textBox_dongia.Clear();
+                }
+                foreach (DataGridViewRow i in dataGridView1.Rows)
+                {
+                    thanhtien += Convert.ToInt32(i.Cells["Quantity"].Value) * Convert.ToInt32(i.Cells["Price"].Value);
+                }
+                textBox_thanhtien.Text = thanhtien.ToString();
             }
-            textBox_thanhtien.Text = thanhtien.ToString();
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void Button_subQLBH_ok_Click(object sender, EventArgs e)
@@ -152,6 +220,11 @@ namespace UIDesign
                     };
                     BLL_Bill.Instance.BLL_AddDeatialBill(dtbill);
                 }
+                foreach (DataRow i in DB.Select())
+                {
+                    DB.Rows.Remove(i);
+                    DB.AcceptChanges();
+                }
             }
             catch (Exception ex)
             {
@@ -162,22 +235,35 @@ namespace UIDesign
         private void Button_subQLBH_del_Click(object sender, EventArgs e)
         {
             DataGridViewSelectedRowCollection r = dataGridView1.SelectedRows;
-            List<int> now = new List<int>();
-            foreach (DataGridViewRow i in r)
+            if (r.Count != 0)
             {
-                if (i.Cells["spID"].Value.ToString() != null)
-                    now.Add(Convert.ToInt32(i.Cells["spID"].Value.ToString()));
-            }
-            foreach (int j in now)
-            {
-                foreach (DataRow i in DB.Select())
+                List<int> now = new List<int>();
+                foreach (DataGridViewRow i in r)
                 {
-                    if (Convert.ToInt32(i["spID"].ToString()) == j)
-                    {
-                        DB.Rows.Remove(i);
-                    }
+                    if (i.Cells["spID"].Value.ToString() != null)
+                        now.Add(Convert.ToInt32(i.Cells["spID"].Value.ToString()));
                 }
-                DB.AcceptChanges();
+                foreach (int j in now)
+                {
+                    foreach (DataRow i in DB.Select())
+                    {
+                        if (Convert.ToInt32(i["spID"].ToString()) == j)
+                        {
+                            DB.Rows.Remove(i);
+                        }
+                    }
+                    DB.AcceptChanges();
+                }
+                int thanhtien = 0;
+                foreach (DataGridViewRow i in dataGridView1.Rows)
+                {
+                    thanhtien += Convert.ToInt32(i.Cells["Quantity"].Value) * Convert.ToInt32(i.Cells["Price"].Value);
+                }
+                textBox_thanhtien.Text = thanhtien.ToString();
+            }
+            else
+            {
+                MessageBox.Show("Bạn chưa chọn sản phẩm nào để xóa");
             }
         }
     }

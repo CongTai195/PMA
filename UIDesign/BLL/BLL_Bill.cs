@@ -31,8 +31,13 @@ namespace UIDesign.BLL
             List<Bill> b = new List<Bill>();
             try
             {
+                if (batdau.Date == ketthuc.Date)
                 {
-                    b = db.Bills.Where(p => p.Date <= ketthuc && p.Date >= batdau).ToList();
+                    b = db.Bills.Where(p => p.Date == batdau.Date).ToList();
+                }
+                else
+                {
+                    b = db.Bills.Where(p => p.Date <= ketthuc.Date && p.Date >= batdau.Date).ToList();
                 }
             }
             catch (Exception e)

@@ -55,6 +55,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
+            this.button_QLBH = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.QLK_subpanel.SuspendLayout();
             this.QLXNK_subpanel.SuspendLayout();
@@ -86,6 +87,7 @@
             this.panel1.AutoScroll = true;
             this.panel1.BackColor = System.Drawing.SystemColors.InfoText;
             this.panel1.Controls.Add(this.button_taotaikhoan);
+            this.panel1.Controls.Add(this.button_QLBH);
             this.panel1.Controls.Add(this.QLK_subpanel);
             this.panel1.Controls.Add(this.button_QLK);
             this.panel1.Controls.Add(this.QLSP_subpanel);
@@ -108,7 +110,7 @@
             this.button_taotaikhoan.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_taotaikhoan.ForeColor = System.Drawing.SystemColors.Menu;
             this.button_taotaikhoan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_taotaikhoan.Location = new System.Drawing.Point(0, 538);
+            this.button_taotaikhoan.Location = new System.Drawing.Point(0, 596);
             this.button_taotaikhoan.Name = "button_taotaikhoan";
             this.button_taotaikhoan.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.button_taotaikhoan.Size = new System.Drawing.Size(330, 60);
@@ -125,7 +127,7 @@
             this.QLK_subpanel.Controls.Add(this.QLXNK_subpanel);
             this.QLK_subpanel.Controls.Add(this.button_subQLK_QLXNK);
             this.QLK_subpanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.QLK_subpanel.Location = new System.Drawing.Point(0, 454);
+            this.QLK_subpanel.Location = new System.Drawing.Point(0, 452);
             this.QLK_subpanel.Name = "QLK_subpanel";
             this.QLK_subpanel.Size = new System.Drawing.Size(330, 84);
             this.QLK_subpanel.TabIndex = 2;
@@ -152,7 +154,7 @@
             this.button_subQLXNK_show.Location = new System.Drawing.Point(0, 0);
             this.button_subQLXNK_show.Name = "button_subQLXNK_show";
             this.button_subQLXNK_show.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
-            this.button_subQLXNK_show.Size = new System.Drawing.Size(330, 40);
+            this.button_subQLXNK_show.Size = new System.Drawing.Size(330, 44);
             this.button_subQLXNK_show.TabIndex = 5;
             this.button_subQLXNK_show.Text = "Hiển thị danh sách";
             this.button_subQLXNK_show.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -191,7 +193,7 @@
             this.button_QLK.ForeColor = System.Drawing.SystemColors.Menu;
             this.button_QLK.Image = ((System.Drawing.Image)(resources.GetObject("button_QLK.Image")));
             this.button_QLK.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_QLK.Location = new System.Drawing.Point(0, 394);
+            this.button_QLK.Location = new System.Drawing.Point(0, 392);
             this.button_QLK.Name = "button_QLK";
             this.button_QLK.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.button_QLK.Size = new System.Drawing.Size(330, 60);
@@ -210,7 +212,7 @@
             this.QLSP_subpanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.QLSP_subpanel.Location = new System.Drawing.Point(0, 307);
             this.QLSP_subpanel.Name = "QLSP_subpanel";
-            this.QLSP_subpanel.Size = new System.Drawing.Size(330, 87);
+            this.QLSP_subpanel.Size = new System.Drawing.Size(330, 85);
             this.QLSP_subpanel.TabIndex = 2;
             // 
             // subQLSP_subpanel
@@ -219,7 +221,7 @@
             this.subQLSP_subpanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.subQLSP_subpanel.Location = new System.Drawing.Point(0, 40);
             this.subQLSP_subpanel.Name = "subQLSP_subpanel";
-            this.subQLSP_subpanel.Size = new System.Drawing.Size(330, 51);
+            this.subQLSP_subpanel.Size = new System.Drawing.Size(330, 41);
             this.subQLSP_subpanel.TabIndex = 2;
             // 
             // button_subQLSPsub_show
@@ -235,7 +237,7 @@
             this.button_subQLSPsub_show.Location = new System.Drawing.Point(0, 0);
             this.button_subQLSPsub_show.Name = "button_subQLSPsub_show";
             this.button_subQLSPsub_show.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
-            this.button_subQLSPsub_show.Size = new System.Drawing.Size(330, 40);
+            this.button_subQLSPsub_show.Size = new System.Drawing.Size(330, 42);
             this.button_subQLSPsub_show.TabIndex = 4;
             this.button_subQLSPsub_show.Text = "Hiển thị danh sách";
             this.button_subQLSPsub_show.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -463,6 +465,27 @@
             this.label2.TabIndex = 8;
             this.label2.Text = "Welcome to PMA";
             // 
+            // button_QLBH
+            // 
+            this.button_QLBH.BackColor = System.Drawing.SystemColors.InfoText;
+            this.button_QLBH.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button_QLBH.FlatAppearance.BorderSize = 0;
+            this.button_QLBH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_QLBH.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_QLBH.ForeColor = System.Drawing.SystemColors.Menu;
+            this.button_QLBH.Image = ((System.Drawing.Image)(resources.GetObject("button_QLBH.Image")));
+            this.button_QLBH.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_QLBH.Location = new System.Drawing.Point(0, 536);
+            this.button_QLBH.Name = "button_QLBH";
+            this.button_QLBH.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.button_QLBH.Size = new System.Drawing.Size(330, 60);
+            this.button_QLBH.TabIndex = 5;
+            this.button_QLBH.Text = "Quản lý bán hàng";
+            this.button_QLBH.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_QLBH.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button_QLBH.UseVisualStyleBackColor = false;
+            this.button_QLBH.Click += new System.EventHandler(this.Button_QLBH_Click);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -521,5 +544,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button button_QLBH;
     }
 }

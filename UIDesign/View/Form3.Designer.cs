@@ -38,7 +38,6 @@
             this.button_subQLK_QLXNK = new System.Windows.Forms.Button();
             this.button_QLK = new System.Windows.Forms.Button();
             this.QLBH_subpanel = new System.Windows.Forms.Panel();
-            this.button_subQLBH_XHD = new System.Windows.Forms.Button();
             this.button_subQLBH_QLDH = new System.Windows.Forms.Button();
             this.button_subQLBH_add = new System.Windows.Forms.Button();
             this.button_QLBH = new System.Windows.Forms.Button();
@@ -100,7 +99,7 @@
             // 
             this.QLKH_subpanel.Controls.Add(this.button_subQLKH_show);
             this.QLKH_subpanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.QLKH_subpanel.Location = new System.Drawing.Point(0, 576);
+            this.QLKH_subpanel.Location = new System.Drawing.Point(0, 517);
             this.QLKH_subpanel.Name = "QLKH_subpanel";
             this.QLKH_subpanel.Size = new System.Drawing.Size(330, 42);
             this.QLKH_subpanel.TabIndex = 9;
@@ -136,7 +135,7 @@
             this.button_QLKH.ForeColor = System.Drawing.SystemColors.Menu;
             this.button_QLKH.Image = ((System.Drawing.Image)(resources.GetObject("button_QLKH.Image")));
             this.button_QLKH.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_QLKH.Location = new System.Drawing.Point(0, 516);
+            this.button_QLKH.Location = new System.Drawing.Point(0, 457);
             this.button_QLKH.Name = "button_QLKH";
             this.button_QLKH.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.button_QLKH.Size = new System.Drawing.Size(330, 60);
@@ -152,9 +151,9 @@
             this.QLK_subpanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
             this.QLK_subpanel.Controls.Add(this.button_subQLK_QLXNK);
             this.QLK_subpanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.QLK_subpanel.Location = new System.Drawing.Point(0, 458);
+            this.QLK_subpanel.Location = new System.Drawing.Point(0, 405);
             this.QLK_subpanel.Name = "QLK_subpanel";
-            this.QLK_subpanel.Size = new System.Drawing.Size(330, 58);
+            this.QLK_subpanel.Size = new System.Drawing.Size(330, 52);
             this.QLK_subpanel.TabIndex = 2;
             // 
             // button_subQLK_QLXNK
@@ -188,7 +187,7 @@
             this.button_QLK.ForeColor = System.Drawing.SystemColors.Menu;
             this.button_QLK.Image = ((System.Drawing.Image)(resources.GetObject("button_QLK.Image")));
             this.button_QLK.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_QLK.Location = new System.Drawing.Point(0, 398);
+            this.button_QLK.Location = new System.Drawing.Point(0, 345);
             this.button_QLK.Name = "button_QLK";
             this.button_QLK.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.button_QLK.Size = new System.Drawing.Size(330, 60);
@@ -202,34 +201,13 @@
             // QLBH_subpanel
             // 
             this.QLBH_subpanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.QLBH_subpanel.Controls.Add(this.button_subQLBH_XHD);
             this.QLBH_subpanel.Controls.Add(this.button_subQLBH_QLDH);
             this.QLBH_subpanel.Controls.Add(this.button_subQLBH_add);
             this.QLBH_subpanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.QLBH_subpanel.Location = new System.Drawing.Point(0, 270);
+            this.QLBH_subpanel.Location = new System.Drawing.Point(0, 264);
             this.QLBH_subpanel.Name = "QLBH_subpanel";
-            this.QLBH_subpanel.Size = new System.Drawing.Size(330, 128);
+            this.QLBH_subpanel.Size = new System.Drawing.Size(330, 81);
             this.QLBH_subpanel.TabIndex = 2;
-            // 
-            // button_subQLBH_XHD
-            // 
-            this.button_subQLBH_XHD.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.button_subQLBH_XHD.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button_subQLBH_XHD.FlatAppearance.BorderSize = 0;
-            this.button_subQLBH_XHD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_subQLBH_XHD.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_subQLBH_XHD.ForeColor = System.Drawing.SystemColors.MenuBar;
-            this.button_subQLBH_XHD.Image = ((System.Drawing.Image)(resources.GetObject("button_subQLBH_XHD.Image")));
-            this.button_subQLBH_XHD.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_subQLBH_XHD.Location = new System.Drawing.Point(0, 80);
-            this.button_subQLBH_XHD.Name = "button_subQLBH_XHD";
-            this.button_subQLBH_XHD.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.button_subQLBH_XHD.Size = new System.Drawing.Size(330, 40);
-            this.button_subQLBH_XHD.TabIndex = 5;
-            this.button_subQLBH_XHD.Text = "Xuất hóa đơn";
-            this.button_subQLBH_XHD.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_subQLBH_XHD.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button_subQLBH_XHD.UseVisualStyleBackColor = false;
             // 
             // button_subQLBH_QLDH
             // 
@@ -283,7 +261,7 @@
             this.button_QLBH.ForeColor = System.Drawing.SystemColors.Menu;
             this.button_QLBH.Image = ((System.Drawing.Image)(resources.GetObject("button_QLBH.Image")));
             this.button_QLBH.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_QLBH.Location = new System.Drawing.Point(0, 210);
+            this.button_QLBH.Location = new System.Drawing.Point(0, 204);
             this.button_QLBH.Name = "button_QLBH";
             this.button_QLBH.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.button_QLBH.Size = new System.Drawing.Size(330, 60);
@@ -301,7 +279,7 @@
             this.QLSP_subpanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.QLSP_subpanel.Location = new System.Drawing.Point(0, 160);
             this.QLSP_subpanel.Name = "QLSP_subpanel";
-            this.QLSP_subpanel.Size = new System.Drawing.Size(330, 50);
+            this.QLSP_subpanel.Size = new System.Drawing.Size(330, 44);
             this.QLSP_subpanel.TabIndex = 2;
             // 
             // button_subQLSP_QLSP
@@ -495,7 +473,6 @@
         private System.Windows.Forms.Button button_QLKH;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button button_subQLBH_XHD;
         private System.Windows.Forms.Panel QLKH_subpanel;
         private System.Windows.Forms.Button button_subQLKH_show;
         private System.Windows.Forms.Label label1;

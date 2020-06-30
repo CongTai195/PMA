@@ -48,7 +48,9 @@ namespace UIDesign
         }
         private void Button_cancel_Click(object sender, EventArgs e)
         {
-            this.Dispose();
+            DialogResult d = MessageBox.Show("Bạn chắc  chắc muốn hủy chứ ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (d == DialogResult.No) return;
+            if (d == DialogResult.Yes) this.Dispose();
         }
 
         private void Button_ok_Click(object sender, EventArgs e)

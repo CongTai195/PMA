@@ -73,8 +73,7 @@ namespace UIDesign
         {
             DialogResult d = MessageBox.Show("Bạn chắc  chắc muốn thoát chứ ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (d == DialogResult.No) return;
-            if (d == DialogResult.Yes) this.Dispose();
-            
+            if (d == DialogResult.Yes) this.Dispose();          
         }
 
         private void Button_QLK_Click(object sender, EventArgs e)
@@ -124,6 +123,12 @@ namespace UIDesign
         {
             SubFormTaiKhoan f = new SubFormTaiKhoan();
             f.ShowDialog();
+        }
+
+        private void Button_QLBH_Click(object sender, EventArgs e)
+        {
+            FormDonHang f = new FormDonHang();
+            openChildform(f);
         }
     }
 }

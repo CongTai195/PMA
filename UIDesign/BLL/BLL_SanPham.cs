@@ -28,6 +28,7 @@ namespace UIDesign.BLL
         }
         public List<SanPham> Search_Bll(int lid, string search)
         {
+            
             SE_07 db = new SE_07();
             List<SanPham> sp = new List<SanPham>();
             try
