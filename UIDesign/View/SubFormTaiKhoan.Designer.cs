@@ -37,7 +37,6 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.textBox_luongnv = new System.Windows.Forms.TextBox();
             this.textBox_pass = new System.Windows.Forms.TextBox();
-            this.textBox_userrole = new System.Windows.Forms.TextBox();
             this.label_pass = new System.Windows.Forms.Label();
             this.label_userrole = new System.Windows.Forms.Label();
             this.label_username = new System.Windows.Forms.Label();
@@ -46,6 +45,7 @@
             this.button_cancel = new System.Windows.Forms.Button();
             this.textBox_username = new System.Windows.Forms.TextBox();
             this.combobox_namenv = new System.Windows.Forms.ComboBox();
+            this.comboBox_role = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -134,17 +134,6 @@
             this.textBox_pass.Name = "textBox_pass";
             this.textBox_pass.Size = new System.Drawing.Size(161, 22);
             this.textBox_pass.TabIndex = 14;
-            // 
-            // textBox_userrole
-            // 
-            this.textBox_userrole.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
-            this.textBox_userrole.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox_userrole.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_userrole.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.textBox_userrole.Location = new System.Drawing.Point(580, 134);
-            this.textBox_userrole.Name = "textBox_userrole";
-            this.textBox_userrole.Size = new System.Drawing.Size(161, 22);
-            this.textBox_userrole.TabIndex = 15;
             // 
             // label_pass
             // 
@@ -240,12 +229,26 @@
             this.combobox_namenv.Size = new System.Drawing.Size(186, 29);
             this.combobox_namenv.TabIndex = 37;
             // 
+            // comboBox_role
+            // 
+            this.comboBox_role.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
+            this.comboBox_role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_role.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox_role.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox_role.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.comboBox_role.FormattingEnabled = true;
+            this.comboBox_role.Location = new System.Drawing.Point(597, 127);
+            this.comboBox_role.Name = "comboBox_role";
+            this.comboBox_role.Size = new System.Drawing.Size(186, 29);
+            this.comboBox_role.TabIndex = 38;
+            // 
             // SubFormTaiKhoan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
             this.ClientSize = new System.Drawing.Size(870, 475);
+            this.Controls.Add(this.comboBox_role);
             this.Controls.Add(this.combobox_namenv);
             this.Controls.Add(this.textBox_username);
             this.Controls.Add(this.button_cancel);
@@ -256,7 +259,6 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.textBox_luongnv);
             this.Controls.Add(this.textBox_pass);
-            this.Controls.Add(this.textBox_userrole);
             this.Controls.Add(this.label_pass);
             this.Controls.Add(this.label_userrole);
             this.Controls.Add(this.label_username);
@@ -284,7 +286,6 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox textBox_luongnv;
         private System.Windows.Forms.TextBox textBox_pass;
-        private System.Windows.Forms.TextBox textBox_userrole;
         private System.Windows.Forms.Label label_pass;
         private System.Windows.Forms.Label label_userrole;
         private System.Windows.Forms.Label label_username;
@@ -293,5 +294,6 @@
         private System.Windows.Forms.Button button_cancel;
         private System.Windows.Forms.TextBox textBox_username;
         private System.Windows.Forms.ComboBox combobox_namenv;
+        private System.Windows.Forms.ComboBox comboBox_role;
     }
 }

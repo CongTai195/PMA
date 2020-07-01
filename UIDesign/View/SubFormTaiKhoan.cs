@@ -37,6 +37,17 @@ namespace UIDesign
                     Text = i.nvName
                 });
             }
+            if (comboBox_role.Items != null) comboBox_role.Items.Clear();
+            comboBox_role.Items.Add(new CBBItems
+            {
+                Value = 1,
+                Text = "admin"
+            });
+            comboBox_role.Items.Add(new CBBItems
+            {
+                Value = 2,
+                Text = "nhanvien"
+            });
         }
 
         private void Button_ok_Click(object sender, EventArgs e)
@@ -45,7 +56,7 @@ namespace UIDesign
             int count = 0;
             try
             {
-                string role = textBox_userrole.Text;
+                string role = comboBox_role.SelectedItem.ToString();
                 string user = textBox_username.Text;
                 string pass = textBox_pass.Text;
                 foreach (TaiKhoan i in db.TaiKhoans)
