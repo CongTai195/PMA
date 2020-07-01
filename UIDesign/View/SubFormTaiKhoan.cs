@@ -54,40 +54,56 @@ namespace UIDesign
         {
             SE_07 db = new SE_07();
             int count = 0;
-            try
+            if (textBox_pass.Text != "")
             {
-                string role = comboBox_role.SelectedItem.ToString();
-                string user = textBox_username.Text;
-                string pass = textBox_pass.Text;
-                foreach (TaiKhoan i in db.TaiKhoans)
+                count += 1;
+            }
+            if (textBox_username.Text != "")
+            {
+                count += 1;
+            }
+            if (count == 2)
+            {
+                try
                 {
-                    if (user == i.UserName)
+                    string role = comboBox_role.SelectedItem.ToString();
+                    string user = textBox_username.Text;
+                    string pass = textBox_pass.Text;
+                    foreach (TaiKhoan i in db.TaiKhoans)
                     {
+                        if (user == i.UserName)
                         {
-                            MessageBox.Show("Tên đăng nhập đã tồn tại!");
-                        }
-                    }
-                    else {
-                        count += 1;
-                        if (count == db.TaiKhoans.Count())
-                        {
-                            TaiKhoan tk = new TaiKhoan
                             {
-                                nvID = ((CBBItems)combobox_namenv.SelectedItem).Value,
-                                UserName = user,
-                                Pass = pass,
-                                Type = role
-                            };
-                            BLL_NhanVien.Instance.AddTaiKhoan_Bll(tk);
-                            MessageBox.Show("Tạo tài khoản thành công");
-                            this.Dispose();
+                                MessageBox.Show("Tên đăng nhập đã tồn tại!");
+                            }
+                        }
+                        else
+                        {
+                            count += 1;
+                            if (count == db.TaiKhoans.Count())
+                            {
+                                TaiKhoan tk = new TaiKhoan
+                                {
+                                    nvID = ((CBBItems)combobox_namenv.SelectedItem).Value,
+                                    UserName = user,
+                                    Pass = pass,
+                                    Type = role
+                                };
+                                BLL_NhanVien.Instance.AddTaiKhoan_Bll(tk);
+                                MessageBox.Show("Tạo tài khoản thành công");
+                                this.Dispose();
+                            }
                         }
                     }
                 }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Bạn chưa nhập đầy đủ tài khoản hoặc mật khẩu ");
             }
         }
     }

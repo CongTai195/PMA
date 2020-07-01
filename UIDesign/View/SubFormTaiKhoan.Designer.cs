@@ -163,7 +163,7 @@
             this.label_username.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.label_username.Location = new System.Drawing.Point(60, 282);
             this.label_username.Name = "label_username";
-            this.label_username.Size = new System.Drawing.Size(138, 23);
+            this.label_username.Size = new System.Drawing.Size(154, 23);
             this.label_username.TabIndex = 10;
             this.label_username.Text = "Tên đăng nhập";
             this.label_username.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;

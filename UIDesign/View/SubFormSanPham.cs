@@ -42,7 +42,7 @@ namespace UIDesign
                 }
             }
         }
-            public void SetView()
+        public void SetView()
         {
             SE_07 db = new SE_07();
             if (SPID == -1)
@@ -78,46 +78,67 @@ namespace UIDesign
         private void Button_ok_Click(object sender, EventArgs e)
         {
             SE_07 db = new SE_07();
-            if (SPID == -1)
+            int count = 0;
+            if (textBox_dvtsp.Text != "")
             {
-                try
+                count += 1;
+            }
+            if (textBox_namesp.Text != "")
+            {
+                count += 1;
+            }
+            if (textBox_pricesp.Text != "")
+            {
+                count += 1;
+            }
+            if (count == 3)
+            {
+                if (SPID == -1)
                 {
-                    string spname = textBox_namesp.Text;
-                    string unit = textBox_dvtsp.Text;
-                    string price = textBox_pricesp.Text;
-                    SanPham sp = new SanPham
+                    try
                     {
-                        //spID = 1,
-                        spName = spname,
-                        Unit = unit,
-                        Price = price,
-                        lID = ((CBBItems)combobox1.SelectedItem).Value
-                    };
-                    BLL_SanPham.Instance.Add_Bll(sp);
-                    D();
-                    this.Dispose();
-                } catch (Exception ex)
+                        string spname = textBox_namesp.Text;
+                        string unit = textBox_dvtsp.Text;
+                        string price = textBox_pricesp.Text;
+                        SanPham sp = new SanPham
+                        {
+                            //spID = 1,
+                            spName = spname,
+                            Unit = unit,
+                            Price = price,
+                            lID = ((CBBItems)combobox1.SelectedItem).Value
+                        };
+                        BLL_SanPham.Instance.Add_Bll(sp);
+                        D();
+                        this.Dispose();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                }
+                else
                 {
-                    MessageBox.Show(ex.Message);
+                    try
+                    {
+                        string spname = textBox_namesp.Text;
+                        string unit = textBox_dvtsp.Text;
+                        string price = textBox_pricesp.Text;
+                        int lID = ((CBBItems)combobox1.SelectedItem).Value;
+                        BLL_SanPham.Instance.Update_Bll(SPID, spname, lID, unit, price);
+                        D();
+                        this.Dispose();
+
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
                 }
             }
             else
             {
-                try
-                {
-                    string spname = textBox_namesp.Text;
-                    string unit = textBox_dvtsp.Text;
-                    string price = textBox_pricesp.Text;
-                    int lID = ((CBBItems)combobox1.SelectedItem).Value;
-                    BLL_SanPham.Instance.Update_Bll(SPID, spname, lID, unit, price);
-                    D();
-                    this.Dispose();
-
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin sản phẩm");
             }
         }
     }

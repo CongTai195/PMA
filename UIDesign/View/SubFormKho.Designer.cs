@@ -245,6 +245,7 @@
             // 
             // dateTimePicker3
             // 
+            this.dateTimePicker3.Enabled = false;
             this.dateTimePicker3.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker3.Location = new System.Drawing.Point(149, 373);
             this.dateTimePicker3.Name = "dateTimePicker3";

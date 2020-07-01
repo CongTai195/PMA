@@ -29,20 +29,27 @@ namespace UIDesign.BLL
         {
             SE_07 db = new SE_07();
             List<Bill> b = new List<Bill>();
-            try
+            if (batdau.Date > ketthuc.Date)
             {
-                if (batdau.Date == ketthuc.Date)
-                {
-                    b = db.Bills.Where(p => p.Date == batdau.Date).ToList();
-                }
-                else
-                {
-                    b = db.Bills.Where(p => p.Date <= ketthuc.Date && p.Date >= batdau.Date).ToList();
-                }
+                MessageBox.Show("Thời gian bạn chọn không hợp lệ");
             }
-            catch (Exception e)
+            else
             {
-                MessageBox.Show(e.Message);
+                try
+                {
+                    if (batdau.Date == ketthuc.Date)
+                    {
+                        b = db.Bills.Where(p => p.Date == batdau.Date).ToList();
+                    }
+                    else
+                    {
+                        b = db.Bills.Where(p => p.Date <= ketthuc.Date && p.Date >= batdau.Date).ToList();
+                    }
+                }
+                catch (Exception e)
+                {
+                    MessageBox.Show(e.Message);
+                }
             }
             return b;
         }

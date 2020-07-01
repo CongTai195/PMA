@@ -56,55 +56,85 @@ namespace UIDesign
         private void Button_ok_Click(object sender, EventArgs e)
         {
             SE_07 db = new SE_07();
-            if (NvID == -1)
+            int count = 0;
+            if (textBox_cmndnv.Text != "")
             {
-                try
+                count += 1;
+            }
+            if (textBox_diachinv.Text != "")
+            {
+                count += 1;
+            }
+            if (textBox_luongnv.Text != "")
+            {
+                count += 1;
+            }
+            if (textBox_namenv.Text != "")
+            {
+                count += 1;
+            }
+            if (textBox_phonenv.Text != "")
+            {
+                count += 1;
+            }
+            if (count == 5)
+            {
+                if (NvID == -1)
                 {
-                    //int nvid = 1;
-                    string namenv = textBox_namenv.Text;
-                    DateTime dob = dateTimePicker1.Value.Date;
-                    string diachi = textBox_diachinv.Text;
-                    string sdt = textBox_phonenv.Text;
-                    string cmnd = textBox_cmndnv.Text;
-                    string luong = textBox_luongnv.Text;
-                    NhanVien nv = new NhanVien
+                    try
                     {
-                        //nvID = nvid,
-                        nvName = namenv,
-                        nvDOB = dob,
-                        nvAddress = diachi,
-                        nvPhone = sdt,
-                        nvIDNumber = cmnd,
-                        Salary = luong,
-                        DayOn = 0,
-                        DayOff = 0
-                    };
-                    BLL_NhanVien.Instance.Add_Bll(nv);
-                    D();
-                    this.Dispose();
-                } catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
+                        //int nvid = 1;
+                        string namenv = textBox_namenv.Text;
+                        DateTime dob = dateTimePicker1.Value.Date;
+                        string diachi = textBox_diachinv.Text;
+                        string sdt = textBox_phonenv.Text;
+                        string cmnd = textBox_cmndnv.Text;
+                        string luong = textBox_luongnv.Text;
+                        NhanVien nv = new NhanVien
+                        {
+                            //nvID = nvid,
+                            nvName = namenv,
+                            nvDOB = dob,
+                            nvAddress = diachi,
+                            nvPhone = sdt,
+                            nvIDNumber = cmnd,
+                            Salary = luong,
+                            DayOn = 0,
+                            DayOff = 0
+                        };
+                        BLL_NhanVien.Instance.Add_Bll(nv);
+                        D();
+                        this.Dispose();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
                 }
-            } else
-            {
-                try
+                else
                 {
-                    string namenv = textBox_namenv.Text;
-                    DateTime dob = dateTimePicker1.Value.Date;
-                    string diachi = textBox_diachinv.Text;
-                    string sdt = textBox_phonenv.Text;
-                    string cmnd = textBox_cmndnv.Text;
-                    string luong = textBox_luongnv.Text;
-                    BLL_NhanVien.Instance.Update_Bll(NvID,namenv,dob,cmnd,sdt,diachi,luong);
-                    D();
-                    this.Dispose();
+                    try
+                    {
+                        string namenv = textBox_namenv.Text;
+                        DateTime dob = dateTimePicker1.Value.Date;
+                        string diachi = textBox_diachinv.Text;
+                        string sdt = textBox_phonenv.Text;
+                        string cmnd = textBox_cmndnv.Text;
+                        string luong = textBox_luongnv.Text;
+                        BLL_NhanVien.Instance.Update_Bll(NvID, namenv, dob, cmnd, sdt, diachi, luong);
+                        D();
+                        this.Dispose();
 
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
                 }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin của nhân viên");
             }
         }
     }
