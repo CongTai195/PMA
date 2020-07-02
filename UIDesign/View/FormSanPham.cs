@@ -111,6 +111,10 @@ namespace UIDesign
             {
                 MessageBox.Show("Bạn chưa chọn sản phẩm nào để chỉnh sửa");
             }
+            if (r.Count > 1)
+            {
+                MessageBox.Show("Chỉ có thể cập nhật 1 sản phẩm. ");
+            }
         }
 
         private void Button_subQLSP_delete_Click(object sender, EventArgs e)

@@ -65,6 +65,10 @@ namespace UIDesign
             {
                 MessageBox.Show("Vui lòng chọn 1 nhân viên để chỉnh sửa");
             }
+            if (r.Count > 1)
+            {
+                MessageBox.Show("Chỉ có thể cập nhật 1 nhân viên. ");
+            }
         }
 
         private void Button_subTTCN_delete_Click(object sender, EventArgs e)

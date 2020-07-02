@@ -129,10 +129,13 @@ namespace UIDesign
                 f.D += new SubFormKho.MyDel(ShowDTGV);
                 f.ShowDialog();
             }
-
             if (r.Count == 0)
             {
                 MessageBox.Show("Vui lòng chọn 1 hoạt động để cập nhật. ");
+            }
+            if (r.Count > 1)
+            {
+                MessageBox.Show("Chỉ có thể cập nhật 1 hoạt động. ");
             }
         }
 

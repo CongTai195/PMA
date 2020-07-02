@@ -21,7 +21,6 @@ namespace UIDesign
             SetCBB();
             CreateTable();
         }
-
         private void Button_back_Click(object sender, EventArgs e)
         {
             this.Dispose();
@@ -57,7 +56,6 @@ namespace UIDesign
                 });
             }
         }
-
         private void Button_subQLKH_add_Click(object sender, EventArgs e)
         {
             int count = 0;
@@ -108,9 +106,7 @@ namespace UIDesign
             {
                 MessageBox.Show(ex.Message);
             }
-            
         }
-
         private void ComboBox_sanpham_SelectedIndexChanged(object sender, EventArgs e)
         {
             SE_07 db = new SE_07();
@@ -131,7 +127,6 @@ namespace UIDesign
                 );
             dataGridView1.DataSource = DB;
         }
-
         private void Button_subQLBH_add_Click(object sender, EventArgs e)
         {
             try
@@ -192,7 +187,6 @@ namespace UIDesign
                 MessageBox.Show(ex.Message);
             }
         }
-
         private void Button_subQLBH_ok_Click(object sender, EventArgs e)
         {
             try
@@ -231,7 +225,6 @@ namespace UIDesign
                 MessageBox.Show(ex.Message);
             }
         }
-
         private void Button_subQLBH_del_Click(object sender, EventArgs e)
         {
             DataGridViewSelectedRowCollection r = dataGridView1.SelectedRows;

@@ -61,6 +61,10 @@ namespace UIDesign
             {
                 MessageBox.Show("Vui lòng chọn 1 khách hàng để cập nhật. ");
             }
+            if (r.Count > 1)
+            {
+                MessageBox.Show("Chỉ có thể cập nhật 1 khách hàng. ");
+            }
         }
 
         private void Button_subQLKH_delete_Click(object sender, EventArgs e)
